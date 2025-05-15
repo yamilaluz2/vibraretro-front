@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibra Retro</title>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="profile-header">
+        <img src="../images/combi.webp" alt="Logo de una combi">
+        <h1>Vibra Retro</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="wall.html">Inicio</a></li>
+            <li><a href="my-profile.html">Mi Perfil</a></li>
+            <li><a href="followers.html">Amigos</a></li>
+            <li><a href="../index.html">Salir</a></li>
+        </ul>
+    </nav>
+    
+    <main class="main-profile">
+        
+        <section class="profile-container">
+            <img src="images/portada.jpg" alt="Foto de portada" class="cover-photo">
+            <img src="images/perfil.jpg" alt="Foto de perfil" class="profile-photo">
+            <h2>Nombre de Usuario</h2>
+            <button type="button">Editar Perfil</button>
+        </section>
+
+        <section class="modal-edit-profile">
+            <form action="">
+                <h2>Editar Perfil</h2>
+                <input type="text" name="user" placeholder="Usuario">
+                <input type="email" name="mail" placeholder="Correo Electrónico">
+                <input type="text" name="name" placeholder="Nombre">
+                <input type="password" name="password" placeholder="Nueva Contraseña">
+                <label for="cover-pic">Foto de Portada</label>
+                <input type="file" id="cover-pic" name="cover-pic" accept="image/*">
+                <label for="profile-pic">Foto de Perfil</label>
+                <input type="file" id="profile-pic" name="profile-pic" accept="image/*">
+                <a href="/pages/profile-delete-confirmation.html">Eliminar cuenta</a>
+                <button type="button">Cancelar</button>
+                <button type="submit">Guardar</button>
+            </form>
+        </section>
+
+        <section class="create-post">
+            <form action="">
+                <img src="" alt="Foto de perfil">
+                <textarea name="memory" placeholder="¿Qué quieres recordar?"></textarea>
+                <input type="file" name="upload-pic" accept="image/*">
+                <button type="submit">Publicar</button>
+            </form>
+        </section>
+
+        <section class="posts">
+            <article class="post">
+                <img src="" alt="Foto de perfil">
+                <h3>Nombre de usuario</h3>
+                <button type="button">Editar post</button>
+                <p>Descripción de la publicación</p>
+                <img src="" alt="Imagen del post">
+                <button type="button">♡ Me Gusta</button>
+                <button type="button">✉ Ver Comentarios</button>
+                <form action="">
+                    <textarea name="comment" placeholder="Comentar"></textarea>
+                    <button type="submit">Comentar</button>
+                </form>    
+            </article>
+        </section>
+
+        <section class="modal-edit-post">
+            <form action="">
+                <h2>Editar publicación</h2>
+                <button type="button">Cerrar</button>
+                <textarea placeholder="Descripción de la publicación"></textarea>
+                <img src="" alt="Imagen del post">
+                <button type="button">Eliminar publicación</button>
+                <button type="submit">Guardar</button>
+            </form>
+        </section>
+
+        <section class="modal-view-comments">
+            <img src="" alt="Foto de perfil">
+            <h2>Nombre de usuario</h2>
+            <button type="button">Cerrar</button>
+            <p>Descripción de la publicación</p>
+            <img src="" alt="Imagen del post">
+            <button type="button">♡ Me Gusta</button>
+            <ul class="comments">
+                <li>
+                    <img src="" alt="Foto de perfil">
+                    <h4>Nombre de usuario</h4>
+                    <p>comentario1</p>
+                </li>
+                <li>
+                    <img src="" alt="Foto de perfil">
+                    <h4>Nombre de usuario</h4>
+                    <p>comentario1</p>
+                </li>
+                <li>
+                    <img src="" alt="Foto de perfil">
+                    <h4>Nombre de usuario</h4>
+                    <p>comentario1</p>
+                </li>
+                <li>
+                    <img src="" alt="Foto de perfil">
+                    <h4>Nombre de usuario</h4>
+                    <p>comentario1</p>
+                </li>
+                <li>
+                    <img src="" alt="Foto de perfil">
+                    <h4>Nombre de usuario</h4>
+                    <p>comentario1</p>
+                </li>
+            </ul>
+            <form action="">
+                <textarea placeholder="Comentar"></textarea>
+                <button type="submit">Comentar</button>
+            </form>  
+        </section>
+
+    </main>
+
+</body>
+</html>
