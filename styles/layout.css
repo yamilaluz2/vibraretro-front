@@ -1,0 +1,38 @@
+body{
+  background-color:#d6e3e6;
+  font-family: "Winky Rough";
+  display: grid;
+  grid-template-areas: 
+    "header"
+    "main-profile"
+    "footer";
+  grid-template-rows: 4em auto 4vh; 
+  width: 100vw;
+  height: 100vh;
+  
+}
+
+header{
+  grid-area: header;
+  background-color:#EFD9B4;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: start;
+  width: 100vw;
+  height: auto;
+  position: fixed;
+  z-index: 1;
+
+  
+  
+}
+
+header img{
+  width: 4em;
+  aspect-ratio: 1/1;
+}
+
+header h1{
+  color:black;
+}
