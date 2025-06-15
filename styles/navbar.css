@@ -1,0 +1,31 @@
+.color{
+    background-color: white;
+    width: 8rem;
+    height: auto;
+    border-radius: 15px;
+    margin-right: 1rem;
+   
+}
+
+.font{
+    font-size: 2em;
+}  
+
+.z-index{
+    z-index: 10;
+    
+}
+
+.m{
+    margin-right: 43px;
+    width: 50px;
+    border-radius: 15px;
+}
+
+@media screen and (min-width: 1024px){
+    nav{
+        right: 0;
+        top: 4rem;
+    }
+    
+}
