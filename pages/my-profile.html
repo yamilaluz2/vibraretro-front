@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vibra Retro</title>
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
@@ -18,118 +21,359 @@
         <h1>Vibra Retro</h1>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="wall.html">Inicio</a></li>
-            <li><a href="my-profile.html">Mi Perfil</a></li>
-            <li><a href="followers.html">Amigos</a></li>
-            <li><a href="../index.html">Salir</a></li>
-        </ul>
+
+
+   
+
+    <nav class=" z-index position-fixed end-0 ms-auto">
+        <button class="d-md-none mt-3 m" data-bs-toggle="collapse" data-bs-target="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            <i class="bi bi-list fs-1"></i>
+        </button>
+        <div class="collapse d-md-block mt-3" id="collapseExample">
+            <ul class="nav d-flex flex-column nav-pills color ">
+                <li class="nav-item"><a  class="nav-link fs-5 d-flex flex-column align-items-center" href="wall.html"><i class="bi bi-house-door-fill fs-1"></i>Inicio</a></li>
+                <li class="nav-item"><a class="nav-link active fs-5 d-flex flex-column align-items-center" href="my-profile.html"><i class="bi bi-person-fill fs-1"></i>Mi Perfil</a></li>
+                <li class="nav-item"><a class="nav-link fs-5 d-flex flex-column align-items-center" href="followers.html"><i class="bi bi-people-fill fs-1"></i>Amigos</a></li>
+                <li class="nav-item"><a class="nav-link fs-5 d-flex flex-column align-items-center" href="../index.html"><i class="bi bi-door-open-fill fs-1" ></i>Salir</a></li>
+            </ul>
+        </div>   
     </nav>
     
-    <main class="main-profile">
+  <main class="main-profile">
         
         <section class="profile-container">
-            <img src="images/portada.jpg" alt="Foto de portada" class="cover-photo">
-            <img src="images/perfil.jpg" alt="Foto de perfil" class="profile-photo">
-            <h2>Nombre de Usuario</h2>
-            <button type="button">Editar Perfil</button>
+            <img src="../images/portada.jpg" alt="Foto de portada" class="cover-photo">
+            <div class="profile-container-row">
+                <img src="../images/eze.JPG" alt="Foto de perfil" class="profile-photo">
+                <h2>Ezequiel Figueroa</h2> 
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEditarPerfil">Editar Perfil</button>
         </section>
 
-        <section class="modal-edit-profile">
-            <form action="">
-                <h2>Editar Perfil</h2>
-                <input type="text" name="user" placeholder="Usuario">
-                <input type="email" name="mail" placeholder="Correo Electrónico">
-                <input type="text" name="name" placeholder="Nombre">
-                <input type="password" name="password" placeholder="Nueva Contraseña">
-                <label for="cover-pic">Foto de Portada</label>
-                <input type="file" id="cover-pic" name="cover-pic" accept="image/*">
-                <label for="profile-pic">Foto de Perfil</label>
-                <input type="file" id="profile-pic" name="profile-pic" accept="image/*">
-                <a href="/pages/profile-delete-confirmation.html">Eliminar cuenta</a>
-                <button type="button">Cancelar</button>
-                <button type="submit">Guardar</button>
+
+        <section class="modal-edit-profile modal fade" id="modalEditarPerfil" tabindex="-1" aria-labelledby="modalPerfilLabel"aria-hidden="true">
+            <form class="modal-dialog" action="#">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="modalPerfilLabel">Editar Perfil</h2>
+                    </div>
+                    <div class="modal-body">
+                        <label for="user">Usuario</label>
+                        <input id="user" class="form-control mb-2" type="text" name="user" placeholder="Usuario"/>
+                        <label for="mail">Correo Electrónico</label>
+                        <input id="mail" class="form-control mb-2" type="email" name="mail" placeholder="Correo Electrónico"/>
+                        <label for="name">Nombre</label>
+                        <input id="name" class="form-control mb-2" type="text" name="name" placeholder="Nombre"/>
+                        <label for="password">Nueva Contraseña</label>
+                        <input  id="password" class="form-control mb-2" type="password" name="password" placeholder="Nueva Contraseña" autocomplete="new-password"/>
+                        <label for="cover-pic">Foto de Portada</label>
+                        <input class="form-control mb-2" type="file" id="cover-pic" name="cover-pic" accept="image/*"/>
+                        <label for="profile-pic">Foto de Perfil</label>
+                        <input class="form-control mb-2" type="file" id="profile-pic" name="profile-pic" accept="image/*"/>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="/pages/profile-delete-confirmation.html" class="btn btn-danger" >Eliminar cuenta</a>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-success">Guardar</button>
+                    </div>
+                </div>
             </form>
         </section>
+    
 
         <section class="create-post">
-            <form action="">
-                <img src="" alt="Foto de perfil">
-                <textarea name="memory" placeholder="¿Qué quieres recordar?"></textarea>
-                <input type="file" name="upload-pic" accept="image/*">
-                <button type="submit">Publicar</button>
+            <form class="form-create-post" action="">
+                <div class="create-post-main">
+                    <img src="../images/user.png" alt="Foto de perfil">
+                    <textarea name="memory" placeholder="¿Qué quieres recordar?"></textarea>
+                </div>  
+                <div class="upload-publish">
+                    <label for="photo"><i class="bi bi-camera-fill icon-camera"></i></label>
+                    <input id="photo" type="file" name="upload-pic" accept="image/*">
+                    <button type="submit">Publicar</button>
+                </div>
             </form>
         </section>
 
         <section class="posts">
             <article class="post">
-                <img src="" alt="Foto de perfil">
-                <h3>Nombre de usuario</h3>
-                <button type="button">Editar post</button>
-                <p>Descripción de la publicación</p>
-                <img src="" alt="Imagen del post">
-                <button type="button">♡ Me Gusta</button>
-                <button type="button">✉ Ver Comentarios</button>
-                <form action="">
+                <div class="post-header">
+                    <img class="user-post" src="../images/user.png" alt="Foto de perfil">
+                    <h3>Ezequiel Figueroa</h3>
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalEditarPost"><i class="bi bi-pencil fs-3"></i></button>
+                </div>
+                <div class="post-main">
+                    <p>Revisando el armario ¡miren lo que encontré! View-Master ¿Recuerdan estoo? ¡Qué nostalgia!</p>
+                    <p>Revisando el armario ¡miren lo que encontré! View-Master ¿Recuerdan estoo? ¡Qué nostalgia!</p>
+                    <p>Revisando el armario ¡miren lo que encontré! View-Master ¿Recuerdan estoo? ¡Qué nostalgia!</p>
+                    <p>Revisando el armario ¡miren lo que encontré! View-Master ¿Recuerdan estoo? ¡Qué nostalgia!</p>
+                    <img src="../images/view-master.jpeg" alt="Imagen del post">
+                </div>
+                <div class="post-reaction">
+                    <button type="button"><i class="bi bi-heart-fill reaction-heart">55</i></button>
+                    <button type="button"><i class="bi bi-emoji-angry-fill reaction-angry">12</i></button>
+                    <button type="submit" class="btn btn-link p-0" data-bs-toggle="modal" data-bs-target="#modalComentarios"><i class="bi bi-chat-square-fill reaction-comment">152</i></button>
+                    
+                </div>
+                
+                <form class="form-comment" action="">
                     <textarea name="comment" placeholder="Comentar"></textarea>
-                    <button type="submit">Comentar</button>
+                    <button type="submit"><i class="bi bi-send-fill"></i></button>
                 </form>    
             </article>
+
+            <article class="post">
+                <div class="post-header">
+                    <img class="user-post" src="../images/user.png" alt="Foto de perfil">
+                    <h3>Ezequiel Figueroa</h3>
+                    <button type="button"><i class="bi bi-pencil fs-3"></i></button>
+                </div>
+                <div class="post-main">
+                    <p>Revisando el armario ¡miren lo que encontré! View-Master ¿Recuerdan estoo? ¡Qué nostalgia!</p>
+                    <p>Revisando el armario ¡miren lo que encontré! View-Master ¿Recuerdan estoo? ¡Qué nostalgia!</p>
+                    <p>Revisando el armario ¡miren lo que encontré! View-Master ¿Recuerdan estoo? ¡Qué nostalgia!</p>
+                    <p>Revisando el armario ¡miren lo que encontré! View-Master ¿Recuerdan estoo? ¡Qué nostalgia!</p>
+                    <img src="../images/view-master.jpeg" alt="Imagen del post">
+                </div>
+                <div class="post-reaction">
+                    <button type="button"><i class="bi bi-heart-fill reaction-heart">55</i></button>
+                    <button type="button"><i class="bi bi-emoji-angry-fill reaction-angry">12</i></button>
+                    <button type="submit" class="btn btn-link p-0" data-bs-toggle="modal" data-bs-target="#modalComentarios"><i class="bi bi-chat-square-fill reaction-comment">152</i></button>
+                    
+                </div>
+                
+                <form class="form-comment" action="">
+                    <textarea name="comment" placeholder="Comentar"></textarea>
+                    <button type="submit"><i class="bi bi-send-fill"></i></button>
+                </form>    
+            </article>
+
+            <article class="post">
+                <div class="post-header">
+                    <img class="user-post" src="../images/user.png" alt="Foto de perfil">
+                    <h3>Ezequiel Figueroa</h3>
+                    <button type="button"><i class="bi bi-pencil fs-3"></i></button>
+                </div>
+                <div class="post-main">
+                    <p>Revisando el armario ¡miren lo que encontré! View-Master ¿Recuerdan estoo? ¡Qué nostalgia!</p>
+                    <p>Revisando el armario ¡miren lo que encontré! View-Master ¿Recuerdan estoo? ¡Qué nostalgia!</p>
+                    <p>Revisando el armario ¡miren lo que encontré! View-Master ¿Recuerdan estoo? ¡Qué nostalgia!</p>
+                    <p>Revisando el armario ¡miren lo que encontré! View-Master ¿Recuerdan estoo? ¡Qué nostalgia!</p>
+                    <img src="../images/view-master.jpeg" alt="Imagen del post">
+                </div>
+                <div class="post-reaction">
+                    <button type="button"><i class="bi bi-heart-fill reaction-heart">55</i></button>
+                    <button type="button"><i class="bi bi-emoji-angry-fill reaction-angry">12</i></button>
+                    <button type="submit" class="btn btn-link p-0" data-bs-toggle="modal" data-bs-target="#modalComentarios"><i class="bi bi-chat-square-fill reaction-comment">152</i></button>
+                    
+                </div>
+                
+                <form class="form-comment" action="">
+                    <textarea name="comment" placeholder="Comentar"></textarea>
+                    <button type="submit"><i class="bi bi-send-fill"></i></button>
+                </form>    
+            </article>
+
+            <article class="post">
+                <div class="post-header">
+                    <img class="user-post" src="../images/user.png" alt="Foto de perfil">
+                    <h3>Ezequiel Figueroa</h3>
+                    <button type="button"><i class="bi bi-pencil fs-3"></i></button>
+                </div>
+                <div class="post-main">
+                    <p>Revisando el armario ¡miren lo que encontré! View-Master ¿Recuerdan estoo? ¡Qué nostalgia!</p>
+                    <p>Revisando el armario ¡miren lo que encontré! View-Master ¿Recuerdan estoo? ¡Qué nostalgia!</p>
+                    <p>Revisando el armario ¡miren lo que encontré! View-Master ¿Recuerdan estoo? ¡Qué nostalgia!</p>
+                    <p>Revisando el armario ¡miren lo que encontré! View-Master ¿Recuerdan estoo? ¡Qué nostalgia!</p>
+                    <img src="../images/view-master.jpeg" alt="Imagen del post">
+                </div>
+                <div class="post-reaction">
+                    <button type="button"><i class="bi bi-heart-fill reaction-heart">55</i></button>
+                    <button type="button"><i class="bi bi-emoji-angry-fill reaction-angry">12</i></button>
+                    <button type="submit" class="btn btn-link p-0" data-bs-toggle="modal" data-bs-target="#modalComentarios"><i class="bi bi-chat-square-fill reaction-comment">152</i></button>
+                    
+                </div>
+                
+                <form class="form-comment" action="">
+                    <textarea name="comment" placeholder="Comentar"></textarea>
+                    <button type="submit"><i class="bi bi-send-fill"></i></button>
+                </form>    
+            </article>
+
+            <article class="post">
+                <div class="post-header">
+                    <img class="user-post" src="../images/user.png" alt="Foto de perfil">
+                    <h3>Ezequiel Figueroa</h3>
+                    <button type="button"><i class="bi bi-pencil fs-3"></i></button>
+                </div>
+                <div class="post-main">
+                    <p>Revisando el armario ¡miren lo que encontré! View-Master ¿Recuerdan estoo? ¡Qué nostalgia!</p>
+                    <p>Revisando el armario ¡miren lo que encontré! View-Master ¿Recuerdan estoo? ¡Qué nostalgia!</p>
+                    <p>Revisando el armario ¡miren lo que encontré! View-Master ¿Recuerdan estoo? ¡Qué nostalgia!</p>
+                    <p>Revisando el armario ¡miren lo que encontré! View-Master ¿Recuerdan estoo? ¡Qué nostalgia!</p>
+                    <img src="../images/view-master.jpeg" alt="Imagen del post">
+                </div>
+                <div class="post-reaction">
+                    <button type="button"><i class="bi bi-heart-fill reaction-heart">55</i></button>
+                    <button type="button"><i class="bi bi-emoji-angry-fill reaction-angry">12</i></button>
+                    <button type="submit" class="btn btn-link p-0" data-bs-toggle="modal" data-bs-target="#modalComentarios"><i class="bi bi-chat-square-fill reaction-comment">152</i></button>
+                    
+                </div>
+                
+                <form class="form-comment" action="">
+                    <textarea name="comment" placeholder="Comentar"></textarea>
+                    <button type="submit"><i class="bi bi-send-fill"></i></button>
+                </form>    
+            </article>
+
+            <article class="post">
+                <div class="post-header">
+                    <img class="user-post" src="../images/user.png" alt="Foto de perfil">
+                    <h3>Ezequiel Figueroa</h3>
+                    <button type="button"><i class="bi bi-pencil fs-3"></i></button>
+                </div>
+                <div class="post-main">
+                    <p>Revisando el armario ¡miren lo que encontré! View-Master ¿Recuerdan estoo? ¡Qué nostalgia!</p>
+                    <p>Revisando el armario ¡miren lo que encontré! View-Master ¿Recuerdan estoo? ¡Qué nostalgia!</p>
+                    <p>Revisando el armario ¡miren lo que encontré! View-Master ¿Recuerdan estoo? ¡Qué nostalgia!</p>
+                    <p>Revisando el armario ¡miren lo que encontré! View-Master ¿Recuerdan estoo? ¡Qué nostalgia!</p>
+                    <img src="../images/view-master.jpeg" alt="Imagen del post">
+                </div>
+                <div class="post-reaction">
+                    <button type="button"><i class="bi bi-heart-fill reaction-heart">55</i></button>
+                    <button type="button"><i class="bi bi-emoji-angry-fill reaction-angry">12</i></button>
+                    <button type="submit" class="btn btn-link p-0" data-bs-toggle="modal" data-bs-target="#modalComentarios"><i class="bi bi-chat-square-fill reaction-comment">152</i></button>
+                    
+                </div>
+                
+                <form class="form-comment" action="">
+                    <textarea name="comment" placeholder="Comentar"></textarea>
+                    <button type="submit"><i class="bi bi-send-fill"></i></button>
+                </form>    
+            </article>
+
+            <article class="post">
+                <div class="post-header">
+                    <img class="user-post" src="../images/user.png" alt="Foto de perfil">
+                    <h3>Ezequiel Figueroa</h3>
+                    <button type="button"><i class="bi bi-pencil fs-3"></i></button>
+                </div>
+                <div class="post-main">
+                    <p>Revisando el armario ¡miren lo que encontré! View-Master ¿Recuerdan estoo? ¡Qué nostalgia!</p>
+                    <p>Revisando el armario ¡miren lo que encontré! View-Master ¿Recuerdan estoo? ¡Qué nostalgia!</p>
+                    <p>Revisando el armario ¡miren lo que encontré! View-Master ¿Recuerdan estoo? ¡Qué nostalgia!</p>
+                    <p>Revisando el armario ¡miren lo que encontré! View-Master ¿Recuerdan estoo? ¡Qué nostalgia!</p>
+                    <img src="../images/view-master.jpeg" alt="Imagen del post">
+                </div>
+                <div class="post-reaction">
+                    <button type="button"><i class="bi bi-heart-fill reaction-heart">55</i></button>
+                    <button type="button"><i class="bi bi-emoji-angry-fill reaction-angry">12</i></button>
+                    <button type="submit" class="btn btn-link p-0" data-bs-toggle="modal" data-bs-target="#modalComentarios"><i class="bi bi-chat-square-fill reaction-comment">152</i></button>
+                    <button type="button"></button>
+                    
+                </div>
+                
+                <form class="form-comment" action="">
+                    <textarea name="comment" placeholder="Comentar"></textarea>
+                    <button type="submit"><i class="bi bi-send-fill"></i></button>
+                </form>    
+            </article>
+
+            
+            
         </section>
 
-        <section class="modal-edit-post">
-            <form action="">
-                <h2>Editar publicación</h2>
-                <button type="button">Cerrar</button>
-                <textarea placeholder="Descripción de la publicación"></textarea>
-                <img src="" alt="Imagen del post">
-                <button type="button">Eliminar publicación</button>
-                <button type="submit">Guardar</button>
-            </form>
+
+       <section class="modal fade" id="modalEditarPost" tabindex="-1" aria-labelledby="modalPostLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <form  class="modal-content" action="">
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="modalPostLabel">Editar publicación</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <textarea class="form-control mb-3" placeholder="Descripción de la publicación">Revisando el armario ¡miren lo que encontré! View-Master ¿Recuerdan estoo? ¡Qué nostalgia!</textarea>
+                        <img src="./images/view-master.jpeg" alt="Imagen del post" class="img-fluid">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger">Eliminar publicación</button>
+                        <button type="submit" class="btn btn-success">Guardar</button>
+                    </div>
+                </form>
+            </div>    
         </section>
 
-        <section class="modal-view-comments">
-            <img src="" alt="Foto de perfil">
-            <h2>Nombre de usuario</h2>
-            <button type="button">Cerrar</button>
-            <p>Descripción de la publicación</p>
-            <img src="" alt="Imagen del post">
-            <button type="button">♡ Me Gusta</button>
-            <ul class="comments">
-                <li>
-                    <img src="" alt="Foto de perfil">
-                    <h4>Nombre de usuario</h4>
-                    <p>comentario1</p>
-                </li>
-                <li>
-                    <img src="" alt="Foto de perfil">
-                    <h4>Nombre de usuario</h4>
-                    <p>comentario1</p>
-                </li>
-                <li>
-                    <img src="" alt="Foto de perfil">
-                    <h4>Nombre de usuario</h4>
-                    <p>comentario1</p>
-                </li>
-                <li>
-                    <img src="" alt="Foto de perfil">
-                    <h4>Nombre de usuario</h4>
-                    <p>comentario1</p>
-                </li>
-                <li>
-                    <img src="" alt="Foto de perfil">
-                    <h4>Nombre de usuario</h4>
-                    <p>comentario1</p>
-                </li>
-            </ul>
-            <form action="">
-                <textarea placeholder="Comentar"></textarea>
-                <button type="submit">Comentar</button>
-            </form>  
+
+        <section class="modal fade modal-comentarios" id="modalComentarios" tabindex="-1" aria-labelledby="modalComentariosLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                <div class="modal-content">
+      
+     
+                    <div class="modal-header d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center">
+                            <img src="./images/user.png" alt="Foto de perfil" class="rounded-circle me-2" style="width: 40px; height: 40px">
+                            <h3 class="modal-title mb-0" id="modalComentariosLabel">Marcos Albarracin</h3>
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <p>Revisando el armario ¡miren lo que encontré! View-Master ¿Recuerdan estoo? ¡Qué nostalgia!</p>
+                        <img src="../images/view-master.jpeg" alt="Imagen del post" class="img-fluid rounded mb-3">
+
+                        <div class="d-flex justify-content-start gap-3 mb-4">
+                            <button type="button" class="btn btn-outline-danger btn-sm">♡ Me Gusta</button>
+                            <button type="button" class="btn btn-outline-warning btn-sm">⚠ Reportar</button>
+                        </div>
+
+                        <ul class="list-unstyled">
+                            <li class="d-flex mb-3">
+                                <img src="" alt="Foto de perfil" class="rounded-circle me-2" style="width: 32px; height: 32px;">
+                                <div>
+                                    <h4 class="mb-1">Jesica Suarez</h4>
+                                    <p class="mb-0">¡Qué gran tesoro encontraste! Yo recuerdo que tenía un disco del cuento de la Sirenita y en cada fotograma tenía escrito lo que pasaba en cada escena</p>
+                                </div>
+                            </li>
+
+                            <li class="d-flex mb-3">
+                                <img src="" alt="Foto de perfil" class="rounded-circle me-2" style="width: 32px; height: 32px;">
+                                <div>
+                                    <h4 class="mb-1">Yamila Contreras</h4>
+                                    <p class="mb-0">Nooo que nostalgia me da eso, yo tenía uno!! Recuerdo que me lo regaló mi abuela. Lo que no recuerdo es que discos tenía :(</p>
+                                </div>
+                            </li>
+
+                            <li class="d-flex mb-3">
+                                <img src="" alt="Foto de perfil" class="rounded-circle me-2" style="width: 32px; height: 32px;">
+                                <div>
+                                    <h4 class="mb-1">Zoe Albarracin</h4>
+                                    <p class="mb-0">Se ve interesante ¿Cómo funcionaba eso?</p>
+                                </div>
+                            </li>
+                            <li class="d-flex mb-3">
+                                <img src="" alt="Foto de perfil" class="rounded-circle me-2" style="width: 32px; height: 32px;">
+                                <div>
+                                    <h4 class="mb-1">Ezequiel Figueroa</h4>
+                                    <p class="mb-0">El View-Master funciona con un disco de cartón que contiene 7 pares de imágenes tomadas desde distintos ángulos. Cada par es visto a través de dos lentes, una por ojo, lo que genera una ilusión de profundidad (3D). Al presionar una palanca, el disco gira y muestra el siguiente par, permitiendo ver varias escenas en secuencia.</p>
+                                </div>
+                            </li>
+          
+                        </ul>
+
+                        <form action="">
+                            <textarea class="form-control mb-2" name="comment" placeholder="Comentar"></textarea>
+                            <button type="submit" class="btn btn-primary btn-sm">Comentar</button>
+                        </form>
+                    </div>
+      
+                </div>
+            </div>
         </section>
+
+
 
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 
 </body>
 </html>
