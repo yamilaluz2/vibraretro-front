@@ -6,6 +6,7 @@
         <title>Vibra Retro</title>
         <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/followers-style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
@@ -26,42 +27,100 @@
             </ul>
         </nav>
     
-        <main>
-            <input type="text" name="search-user" id="search" placeholder="Buscar...">
-        
-            <select id="filter-user" name="filter-user">
-                <option value="all">Todos</option>
-                <option value="following">Siguiendo</option>
-                <option value="followers">Seguidores</option>
-                <option value="mutual">Seguimiento Mutuo</option>
-            </select>
+        <main class="main-followers">
+            
+            <section class="search-filter-user">
+                <input type="text" name="search-user" id="search" placeholder="Buscar">
+                <select id="filter-user" name="filter-user">
+                    <option value="all">Todos</option>
+                    <option value="following">Siguiendo</option>
+                    <option value="followers">Seguidores</option>
+                    <option value="mutual">Seguimiento Mutuo</option>
+                </select>
+            </section>
         
             <section class="list-users">
                 <ul>
-                    <li>
-                        <img src="usuario.png" alt="Foto de perfil">
-                        <a href="#">Jesica Suarez</a>
-                        <button type="button">Seguir</button>
+                    <li class="item-follower">
+                        <div class="item-follower-container">
+                            <img src="../images/user.png" alt="Foto de perfil">
+                            <div class="user-info">
+                                <a href="#">Jesica Suarez</a>
+                                <button type="button" class="button-following">Seguir</button>
+                            </div>
+                        </div>
                     </li>
-                    <li>
-                        <img src="usuario.png" alt="Foto de perfil">
-                        <a href="#">Yamila Contreras</a>
-                        <button type="button">Dejar de seguir</button>
+                    <li class="item-follower">
+                        <div class="item-follower-container">
+                            <img src="../images/user.png" alt="Foto de perfil">
+                            <div class="user-info">
+                                <a href="#">Yamila Contreras</a>
+                                <button type="button" class="button-delete-following">Dejar de Seguir</button>
+                            </div>
+                        </div>
                     </li>
-                    <li>
-                        <img src="usuario.png" alt="Foto de perfil">
-                        <a href="#">Marcos Albarracin</a>
-                        <button type="button">Seguir</button>
+                    <li class="item-follower">
+                        <div class="item-follower-container">
+                            <img src="../images/user.png" alt="Foto de perfil">
+                            <div class="user-info">
+                                <a href="#">Marcos Albarracín</a>
+                                <button type="button" class="button-delete-following">Dejar de Seguir</button>
+                            </div>
+                        </div>
                     </li>
-                    <li>
-                        <img src="usuario.png" alt="Foto de perfil">
-                        <a href="#">Zoe Albarracin</a>
-                        <button type="button">Dejar de seguir</button>
+                    <li class="item-follower">
+                        <div class="item-follower-container">
+                            <img src="../images/user.png" alt="Foto de perfil">
+                            <div class="user-info">
+                                <a href="#">Ezequiel Figueroa</a>
+                                <button type="button" class="button-following">Seguir</button>
+                            </div>
+                        </div>
                     </li>
-                    <li>
-                        <img src="usuario.png" alt="Foto de perfil">
-                        <a href="#">Ezequiel Figueroa</a>
-                        <button type="button">Seguir</button>
+                    <li class="item-follower">
+                        <div class="item-follower-container">
+                            <img src="../images/user.png" alt="Foto de perfil">
+                            <div class="user-info">
+                                <a href="#">Zoe Albarracín</a>
+                                <button type="button" class="button-following">Seguir</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-follower">
+                        <div class="item-follower-container">
+                            <img src="../images/user.png" alt="Foto de perfil">
+                            <div class="user-info">
+                                <a href="#">Zoe Albarracín</a>
+                                <button type="button" class="button-following">Seguir</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-follower">
+                        <div class="item-follower-container">
+                            <img src="../images/user.png" alt="Foto de perfil">
+                            <div class="user-info">
+                                <a href="#">Zoe Albarracín</a>
+                                <button type="button" class="button-following">Seguir</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-follower">
+                        <div class="item-follower-container">
+                            <img src="../images/user.png" alt="Foto de perfil">
+                            <div class="user-info">
+                                <a href="#">Zoe Albarracín</a>
+                                <button type="button" class="button-following">Seguir</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-follower">
+                        <div class="item-follower-container">
+                            <img src="../images/user.png" alt="Foto de perfil">
+                            <div class="user-info">
+                                <a href="#">Zoe Albarracín</a>
+                                <button type="button" class="button-following">Seguir</button>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </section>
