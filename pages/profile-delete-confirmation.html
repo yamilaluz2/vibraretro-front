@@ -4,40 +4,42 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Vibra Retro</title>
-        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="./styles/style-form.css">
+        <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="../styles/style-form.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    
-       
     </head>
-    <body class="grid-layout">
 
+    <body class="grid-layout">
         <header class="header">
         <img src="../images/combi.webp" alt="Logo de una combi"/>
         <h1>Vibra Retro</h1>
         </header>
 
-        <main class="main main-login">
-            <section class="banner">
-                <img src="../images/vintage.webp" alt="Imagen con objetos retro">
-            </section>
-            <section class="form-login">
+        <main class="main main-delete-account">
+            <section class="form-delete-account">
                 <form class="form-common" action="">
-                    <h2 class="title-form">¡Bienvenidos!</h2>
-                    <input type="email" name="mail" placeholder="Correo Electrónico">
+                    <h2 class="title-form">Eliminar cuenta</h2>
+                    <input type="text" name="name" placeholder="Nombre">
+                    <input type="email" name="mail" placeholder="Correo electrónico">
+                    <input type="text" name="user" placeholder="Usuario">
                     <input type="password" name="password" placeholder="Contraseña">
-                    <button class="form-button button-login" type="submit">Ingresar</button>
-                    <p>¿No tienes una cuenta?</p>
-                    <a class="button-register form-button" href="/pages/sign-up.html">Registrate</a>
+                    <div class="button-accion">
+                        <button class="form-button button-delete" type="submit">Eliminar</button>
+                        <a href="/pages/my-profile.html" class="button-cancel form-button" >Cancelar</a>
+                    </div>
                 </form>
+
             </section>
+            
+            
         </main>
 
         <footer class="footer">
         <p>© 2025 VibraRetro. Licenciado bajo la MIT License.</p>
         </footer>
+        
     </body>
 </html>
