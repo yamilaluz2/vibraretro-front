@@ -50,13 +50,12 @@
   margin-right: 9px;
   margin-top: 9px;
   box-shadow: 2px 2px 5px black;
-  
-
 }
 
 .create-post{
   max-width: 700px;
   width: 95vw;
+  margin-top: 30px;
 }
 
 .form-create-post{
@@ -148,17 +147,14 @@
   gap:10px;
   box-shadow: 3px 3px 3px black;
   align-items: center;
-  
-  
 }
 
 .post-header{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  align-items: center;
   width: 95%;
   height: 7rem;
-  align-items: center;
 }
 
 .post-header button{
@@ -174,10 +170,6 @@
   object-fit: cover;
   
   
-}
-
-#title-post{
-  margin-right: 15rem;
 }
 
 .post-main{
@@ -216,11 +208,9 @@
   
 }
 
-
 .reaction-heart:hover{
   color: red;
 }
-
 
 .reaction-angry:hover{
   color: rgb(248, 53, 53);
@@ -229,8 +219,6 @@
 .reaction-comment:hover{
   color: rgb(190, 187, 0);
 }
-
-
 
 .form-comment{
   display: flex;
@@ -258,6 +246,11 @@
   color: #f8a700;
 }
 
+.width-user {
+  width: 70px; 
+  height: 70px;
+}
+
 @media screen and (min-width:768px){
   html{
     font-size: 100%;
@@ -271,6 +264,5 @@
     font-size: 100%;
   }
   
- 
 
 }
