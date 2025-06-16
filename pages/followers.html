@@ -5,33 +5,43 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Vibra Retro</title>
         <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="../styles/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="../styles/reset.css">
+        <link rel="stylesheet" href="../styles/layout.css">
         <link rel="stylesheet" href="../styles/followers-style.css">
+        <link rel="stylesheet" href="../styles/navbar.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     </head>
-    <body>
-        <header>
+
+    <body class="grid-layout">
+        <header class="header">
             <img src="../images/combi.webp" alt="Logo de una combi">
             <h1>Vibra Retro</h1>
         </header>
         
-        <nav>
-            <ul>
-                <li><a href="wall.html">Inicio</a></li>
-                <li><a href="my-profile.html">Mi Perfil</a></li>
-                <li><a href="followers.html">Amigos</a></li>
-                <li><a href="../index.html">Salir</a></li>
-            </ul>
+        <nav class=" z-index position-fixed end-0 ms-auto">
+            <button class="d-md-none mt-3 m" data-bs-toggle="collapse" data-bs-target="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <i class="bi bi-list fs-1"></i>
+            </button>
+            <div class="collapse d-md-block mt-3" id="collapseExample">
+                <ul class="nav d-flex flex-column nav-pills color ">
+                    <li class="nav-item"><a  class="nav-link  fs-5 d-flex flex-column align-items-center" href="wall.html"><i class="bi bi-house-door-fill fs-1"></i>Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 d-flex flex-column align-items-center" href="my-profile.html"><i class="bi bi-person-fill fs-1"></i>Mi Perfil</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 active d-flex flex-column align-items-center" href="followers.html"><i class="bi bi-people-fill fs-1"></i>Amigos</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 d-flex flex-column align-items-center" href="../index.html"><i class="bi bi-door-open-fill fs-1" ></i>Salir</a></li>
+                </ul>
+            </div>   
         </nav>
-    
-        <main class="main-followers">
+
+        <main class="main-followers main">
             
             <section class="search-filter-user">
-                <input type="text" name="search-user" id="search" placeholder="Buscar">
-                <select id="filter-user" name="filter-user">
+                <input type="text" name="search-user" id="search" class="search-filter" placeholder="Buscar">
+                <select class="search-filter" id="filter-user" name="filter-user">
                     <option value="all">Todos</option>
                     <option value="following">Siguiendo</option>
                     <option value="followers">Seguidores</option>
@@ -126,6 +136,8 @@
             </section>
         
         </main>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+
     
     </body>
 </html>
