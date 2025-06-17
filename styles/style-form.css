@@ -66,11 +66,11 @@
 }
 
 .button-login{
-  background-color: green;
+  background-color: #f8a700;
 }
 
 .button-delete{
-  background-color: red;
+  background-color: #d94127;
 }
 
 .button-register, 
@@ -112,9 +112,13 @@
   .banner{
     display: block;
     width: 20vw;
-    aspect-ratio: 1/1;
+    aspect-ratio: 1/1;  
   }
 
+  .banner img{
+    box-shadow: 3px 3px 5px black;
+    border-radius: 15px;
+  }
 
 } 
 
