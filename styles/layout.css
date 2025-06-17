@@ -68,19 +68,14 @@
 .footer {
   grid-area: footer;
   text-align: center;
-  padding: 1.3em;
-  font-size: 0.8em;
+  font-size: 0.5em;
   background: repeating-linear-gradient(to right, #EFD9B4, #ffcc66, #d6c1a3, #ffcc66, #EFD9B4);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-  position: relative;
-  z-index: 10;
 }
 
 .main {
   grid-area: main;
   background-color: #d6e3e6;
   width: 100vw;
-  
 }
 
 
