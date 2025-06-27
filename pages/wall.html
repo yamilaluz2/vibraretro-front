@@ -42,7 +42,7 @@
         <section class="create-post">
             <form class="form-create-post" action="">
                 <div class="create-post-main">
-                    <img src="../images/user.png" alt="Foto de perfil">
+                    <img src="../images/photo-profile.webp" alt="Foto de perfil">
                     <textarea name="memory" placeholder="¿Qué quieres recordar?"></textarea>
                 </div>  
                 <div class="upload-publish">
@@ -57,12 +57,14 @@
 
             <article class="post">
                 <div class="post-header">
-                    <img class="user-post" src="../images/user.png" alt="Foto de perfil">
-                    <h3 id="title-post">Ezequiel Figueroa</h3>
+                    <div class="post-header-user">
+                        <img class="user-post" src="../images/photo-profile.webp" alt="Foto de perfil">
+                        <h3 id="title-post">Ezequiel Figueroa</h3>
+                    </div>    
                 </div>
                 <div class="post-main">
-                    <p>Revisando el armario ¡miren lo que encontré! View-Master ¿Recuerdan estoo? ¡Qué nostalgia!</p>
-                    <img src="../images/view-master.jpeg" alt="Imagen del post">
+                    <p>Se acuerdan de los álbumes de Dragon Ball Z, Yo todavia los tengo!.</p>
+                    <img src="../images/dragonball.webp" alt="Imagen del post">
                 </div>
                 <div class="post-reaction">
                     <button type="button"><i class="bi bi-heart-fill reaction-heart">55</i></button>
@@ -72,17 +74,20 @@
                     
                 <form class="form-comment" action="">
                     <textarea name="comment" placeholder="Comentar"></textarea>
-                    <button type="submit"><i class="bi bi-send-fill send"></i></button>
+                    <button type="submit">Publicar comentario</i></button>
                 </form>    
             </article>
                 
             <article class="post">
                 <div class="post-header">
-                    <img class="user-post" src="../images/user.png" alt="Foto de perfil">
-                    <h3 id="title-post">Yamila Contreras</h3>
+                    <div class="post-header-user">
+                        <img class="user-post" src="../images/user.webp" alt="Foto de perfil">
+                        <h3 id="title-post">Yamila Contreras</h3>
+                    </div>    
                 </div>
                 <div class="post-main">
                     <p>¿Qué etiquetas de cigarrillos coleccionaban para jugar? Yo recuerdo que mis favoritas eran las Conway</p>
+                    <img src="../images/etiquetas.webp" alt="etiquetas">
                 </div>
                 <div class="post-reaction">
                     <button type="button"><i class="bi bi-heart-fill reaction-heart">55</i></button>
@@ -91,17 +96,20 @@
                 </div>
                 <form class="form-comment" action="">
                     <textarea name="comment" placeholder="Comentar"></textarea>
-                    <button type="submit"><i class="bi bi-send-fill send"></i></button>
+                    <button type="submit">Publicar comentario</button>
                 </form>
             </article>
 
             <article class="post">
                 <div class="post-header">
-                    <img class="user-post" src="../images/user.png" alt="Foto de perfil">
-                    <h3 id="title-post">Zoe Albarracin</h3>
+                    <div class="post-header-user">
+                        <img class="user-post" src="../images/user.webp" alt="Foto de perfil">
+                        <h3 id="title-post">Federico Piedrasanta</h3>
+                    </div>    
                 </div>
                 <div class="post-main">
-                    <p>Recuerdo que al regresar del colegio veia Thundercats ¡Qué serie! </p>
+                    <p>Cuando el poder de la infancia se lleva en el pecho, ThunderCats.</p>
+                    <img src="../images/profe.webp" alt="ThunderCats">
                 </div>
                 <div class="post-reaction">
                     <button type="button"><i class="bi bi-heart-fill reaction-heart">55</i></button>
@@ -110,17 +118,20 @@
                 </div>
                 <form class="form-comment" action="">
                     <textarea name="comment" placeholder="Comentar"></textarea>
-                    <button type="submit"><i class="bi bi-send-fill send"></i></button>
+                    <button type="submit">Publicar comentario</button>
                 </form>
             </article>
             
             <article class="post">
                 <div class="post-header">
-                    <img class="user-post" src="../images/user.png" alt="Foto de perfil">
-                    <h3 id="title-post">Jesica Suarez</h3>
+                    <div class="post-header-user">
+                        <img class="user-post" src="../images/user.webp" alt="Foto de perfil">
+                        <h3 id="title-post">Jesica Suarez</h3>
+                    </div>    
                 </div>
                 <div class="post-main">
                     <p>¡Se cumplieron 45 años de la creación del mejor juego de la historia genteeeee el PACMAN! </p>
+                    <img src="../images/pacman.webp" alt="pacman">
                 </div>
                 <div class="post-reaction">
                     <button type="button"><i class="bi bi-heart-fill reaction-heart">55</i></button>
@@ -129,17 +140,20 @@
                 </div>
                 <form class="form-comment" action="">
                     <textarea name="comment" placeholder="Comentar"></textarea>
-                    <button type="submit"><i class="bi bi-send-fill send"></i></button>
+                    <button type="submit">Publicar comentario</button>
                 </form>
             </article>
         
             <article class="post">
                 <div class="post-header">
-                    <img class="user-post" src="../images/user.png" alt="Foto de perfil">
-                    <h3 id="title-post">Marcos Albarracin</h3>
+                    <div class="post-header-user">
+                        <img class="user-post" src="../images/user.webp" alt="Foto de perfil">
+                        <h3 id="title-post">Marcos Albarracin</h3>
+                    </div>    
                 </div>
                 <div class="post-main">
                     <p>¿Qué canciones de Soda Stereo me recomiendan para una playlist? </p>
+                    <img src="../images/soda.webp" alt="sodastereo">
                 </div>
                 <div class="post-reaction">
                     <button type="button"><i class="bi bi-heart-fill reaction-heart">55</i></button>
@@ -148,7 +162,29 @@
                 </div>
                 <form class="form-comment" action="">
                     <textarea name="comment" placeholder="Comentar"></textarea>
-                    <button type="submit"><i class="bi bi-send-fill send"></i></button>
+                    <button type="submit">Publicar comentario</button>
+                </form>
+            </article>
+
+            <article class="post">
+                <div class="post-header">
+                    <div class="post-header-user">
+                        <img class="user-post" src="../images/user.webp" alt="Foto de perfil">
+                        <h3 id="title-post">Zoe Albarracin</h3>
+                    </div>    
+                </div>
+                <div class="post-main">
+                    <p>No es solo una PC con windows '98, es una máquina del tiempo jajaja.</p>
+                    <img src="../images/windows.webp" alt="windows98">
+                </div>
+                <div class="post-reaction">
+                    <button type="button"><i class="bi bi-heart-fill reaction-heart">55</i></button>
+                    <button type="button"><i class="bi bi-emoji-angry-fill reaction-angry">12</i></button>
+                    <button type="submit" class="btn btn-link p-0" data-bs-toggle="modal" data-bs-target="#modalComentarios"><i class="bi bi-chat-square-fill reaction-comment">152</i></button>
+                </div>
+                <form class="form-comment" action="">
+                    <textarea name="comment" placeholder="Comentar"></textarea>
+                    <button type="submit">Publicar comentario</button>
                 </form>
             </article>
 
@@ -160,7 +196,7 @@
 
                     <div class="modal-header d-flex align-items-center justify-content-between">
                         <div class="d-flex align-items-center">
-                            <img src="../images/user.png" alt="Foto de perfil" class="rounded-circle me-2 width-user">
+                            <img src="../images/user.webp" alt="Foto de perfil" class="rounded-circle me-2 width-user">
                             <h3 class="modal-title mb-0" id="modalComentariosLabel">Marcos Albarracin</h3>
                         </div>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
@@ -168,7 +204,7 @@
                     
                     <div class="modal-body">
                         <p>Revisando el armario ¡miren lo que encontré! View-Master ¿Recuerdan estoo? ¡Qué nostalgia!</p>
-                        <img src="../images/view-master.jpeg" alt="Imagen del post" class="img-fluid rounded mb-3">
+                        <img src="../images/view-master.webp" alt="Imagen del post" class="img-fluid rounded mb-3">
 
                         <div class="d-flex justify-content-start gap-3 mb-4">
                             <button type="button" class="btn btn-outline-danger btn-sm">Me Gusta</button>
@@ -177,7 +213,7 @@
 
                         <ul class="list-unstyled">
                             <li class="d-flex mb-3">
-                                <img src="../images/user.png" alt="Foto de perfil" class="rounded-circle me-2 width-user">
+                                <img src="../images/user.webp" alt="Foto de perfil" class="rounded-circle me-2 width-user">
                                 <div>
                                     <h4 class="mb-1">Jesica Suarez</h4>
                                     <p class="mb-0">¡Qué gran tesoro encontraste! Yo recuerdo que tenía un disco del cuento de la Sirenita y en cada fotograma tenía escrito lo que pasaba en cada escena</p>
@@ -185,7 +221,7 @@
                             </li>
 
                             <li class="d-flex mb-3">
-                                <img src="../images/user.png" alt="Foto de perfil" class="rounded-circle me-2 width-user">
+                                <img src="../images/user.webp" alt="Foto de perfil" class="rounded-circle me-2 width-user">
                                 <div>
                                     <h4 class="mb-1">Yamila Contreras</h4>
                                     <p class="mb-0">Nooo que nostalgia me da eso, yo tenía uno!! Recuerdo que me lo regaló mi abuela. Lo que no recuerdo es que discos tenía :(</p>
@@ -193,14 +229,14 @@
                             </li>
 
                             <li class="d-flex mb-3">
-                                <img src="../images/user.png" alt="Foto de perfil" class="rounded-circle me-2 width-user">
+                                <img src="../images/user.webp" alt="Foto de perfil" class="rounded-circle me-2 width-user">
                                 <div>
                                     <h4 class="mb-1">Zoe Albarracin</h4>
                                     <p class="mb-0">Se ve interesante ¿Cómo funcionaba eso?</p>
                                 </div>
                             </li>
                             <li class="d-flex mb-3">
-                                <img src="../images/user.png" alt="Foto de perfil" class="rounded-circle me-2 width-user">
+                                <img src="../images/user.webp alt="Foto de perfil" class="rounded-circle me-2 width-user">
                                 <div>
                                     <h4 class="mb-1">Ezequiel Figueroa</h4>
                                     <p class="mb-0">El View-Master funciona con un disco de cartón que contiene 7 pares de imágenes tomadas desde distintos ángulos. Cada par es visto a través de dos lentes, una por ojo, lo que genera una ilusión de profundidad (3D). Al presionar una palanca, el disco gira y muestra el siguiente par, permitiendo ver varias escenas en secuencia.</p>
