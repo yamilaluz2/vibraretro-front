@@ -4,6 +4,7 @@
     height: auto;
     border-radius: 15px;
     margin-right: 1rem;
+    
 }
 
 .nav-pills .nav-link.active {
@@ -56,6 +57,9 @@
     nav{
         right: 0;
         top: 4rem;
+        margin-top: 2.3rem;
     }
+
+    
     
 }
