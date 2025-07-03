@@ -5,7 +5,7 @@
     "header"
     "main"
     "footer";
-  grid-template-rows: 3em auto 3vh;
+  grid-template-rows: 3em auto 2em;
   grid-template-columns: 1fr;
   height: 100vh;
 }
@@ -25,6 +25,8 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
   z-index: 10;
 }
+
+
 
 @keyframes moverDegrade {
   0% {
@@ -68,7 +70,7 @@
 .footer {
   grid-area: footer;
   text-align: center;
-  font-size: 0.5em;
+  font-size: 0.8em;
   background: repeating-linear-gradient(to right, #EFD9B4, #ffcc66, #d6c1a3, #ffcc66, #EFD9B4);
 }
 

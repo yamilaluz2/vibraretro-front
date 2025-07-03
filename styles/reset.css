@@ -58,6 +58,7 @@ svg {
   
 body{
   font-family: "Winky Rough";
+  overflow-x: hidden;
   
 }
 

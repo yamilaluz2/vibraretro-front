@@ -70,7 +70,7 @@
 }
 
 .user-info a {
-    font-size: 1.2em;
+    font-size: 1.6em;
     text-decoration: none;
     color: black;
     font-weight: bold;
@@ -79,8 +79,8 @@
 .button-following,
 .button-delete-following {
     width: 7em;
-    height: 3em;
-    font-size: 1em;
+    height: 2em;
+    font-size: 1.6em;
     border-radius: 5px;
     box-shadow: 2px 2px 5px black;
     text-align: center;
@@ -92,9 +92,19 @@
     color: black;
 }
 
+.button-following:hover{
+    background-color: #a34f07;
+
+}
+
 .button-delete-following {
     background-color: #d94127;
     color: black;
+}
+
+.button-delete-following:hover{
+    background-color: #97230f;
+
 }
 
 
@@ -133,6 +143,6 @@
     }
 
     html{
-        font-size: 75%;
+        font-size: 70%;
     }
 }

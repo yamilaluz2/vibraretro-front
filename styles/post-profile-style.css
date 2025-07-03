@@ -26,7 +26,7 @@
 
 .cover-photo{
   width: 95vw;
-  height: 15em;
+  height: 15rem;
   border-bottom: solid 3px rgb(8, 8, 8);
   border-radius: 15px;
 }
@@ -35,7 +35,7 @@
   border-radius: 50%;
   border: solid 3px rgb(24, 24, 23);
   object-fit: cover;
-  width: 30vw;
+  width: 10rem;
   aspect-ratio: 1/1;
 }
 
@@ -45,7 +45,7 @@
   align-self:center;
   width: 7em;
   height: 2.5em;
-  font-size: 1.2em;
+  font-size: 1.6em;
   border-color: black;
   border-radius: 5px;
   margin-right: 9px;
@@ -81,17 +81,19 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   max-width: 670px;
   width:95%;
   height:7rem;
   margin-top: 10px;
   gap: 5px;
+  
 }
 
 
 .create-post-main img{
-  width: 4rem;
-  height: 4rem;
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
   object-fit: cover;
   
@@ -104,6 +106,7 @@
   font-size: 1.6em;
   padding: 10px;
   border-radius: 10px;
+  resize: none;
 }
 
 .upload-publish{
@@ -114,6 +117,7 @@
   max-width: 670px;
   height: 3.5rem;
   margin-bottom: 10px;
+
 }
 
 .upload-publish button{
@@ -123,8 +127,11 @@
   font-size: 1.6em;
   background-color:#f8a700;
   color: black;
-  box-shadow: -1px -1px 5px black;
-  margin-right: 0.5em;  
+  box-shadow: -1px -1px 5px black;  
+}
+
+.upload-publish button:hover{
+  background-color:#a34f07;
 }
 
 .upload-publish input{
@@ -201,7 +208,7 @@
   height: 5rem;
   border-radius: 50%;
   object-fit: cover;
-  background-color: #f8a700;
+  
   
   
 }
@@ -290,7 +297,7 @@
 }
 
 .form-comment button{
-  background-color:#f8a500ab;
+  background-color:#f8a700;
   color: black;
   width: 17rem;
   height: 2em;           
@@ -303,11 +310,49 @@
   
 }
 
+.form-comment button:hover{
+  background-color:#a34f07;
+}
+
 
 .width-user {
   width: 70px; 
   height: 70px;
 }
+
+.back-modal-header{
+  background-color: rgba(235, 167, 8, 0.521);
+  box-shadow: 0px 2px 10px 1px black;
+  z-index: 1;
+           
+}
+
+.back-modal-footer{
+  background-color: rgba(235, 167, 8, 0.521);
+  box-shadow: 0px -2px 10px 1px black;
+  z-index: 1;
+  
+}
+
+.size-title-modal{
+  font-size: 2.4rem;
+  
+}
+
+.size-content-modal{
+  font-size: 1.6rem;
+}
+
+.back-modal-body{
+  background-color:#d6e3e667;
+  
+}
+
+.shadow-modal-edit-profile{
+  box-shadow: 2px 2px 10px 1px black;
+}
+
+
 
 @media screen and (min-width:768px){
   html{
@@ -319,8 +364,18 @@
 @media (min-width: 1024px){
 
   html{
-    font-size: 75%;
+    font-size: 70%;
   }
+
+  .cover-photo{
+  height: 20rem;
+  
+}
+
+.profile-photo{
+  width: 15rem;
+
+}
   
 
 }
