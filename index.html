@@ -28,11 +28,11 @@
                 <img src="./images/vintage.webp" alt="Imagen con objetos retro">
             </section>
             <section class="form-login">
-                <form class="form-common" action="">
+                <form class="form-common" id="form-login" action="">
                     <h2 class="title-form">¡Bienvenidos!</h2>
-                    <input type="email" name="mail" class="form-input" placeholder="Correo Electrónico">
-                    <input type="password" name="password" class="form-input" placeholder="Contraseña">
-                    <a href="pages/wall.html" class="button-cancel form-button">Ingresar</a>
+                    <input type="email" name="mail" class="form-input" id="mail" autocomplete="current-mail" placeholder="Correo Electrónico">
+                    <input type="password" name="password" class="form-input" id="password" autocomplete="current-password" placeholder="Contraseña">
+                    <button type="submit" id="btn-login" class="button-cancel form-button">Ingresar</button>
                     <p>¿No tienes una cuenta?</p>
                     <a class="button-register form-button" href="pages/sign-up.html">Registrate</a>
                 </form>
@@ -43,4 +43,6 @@
         <p>© 2025 VibraRetro. Licenciado bajo la MIT License.</p>
         </footer>
     </body>
+    <script src="./scripts/fetch.js"></script>
+    <script src="./scripts/login.js"></script>
 </html>

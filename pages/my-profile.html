@@ -54,24 +54,24 @@
 
 
         <section class="modal-edit-profile modal fade" id="modalEditarPerfil" tabindex="-1" aria-labelledby="modalPerfilLabel"aria-hidden="true">
-            <form class="modal-dialog shadow-modal-edit-profile" action="#">
+            <form class="modal-dialog shadow-modal-edit-profile" enctype="multipart/form-data" id="form" action="#">
                 <div class="modal-content">
                     <div class="modal-header back-modal-header">
                         <h2 class="modal-title size-title-modal" id="modalPerfilLabel">Editar Perfil</h2>
                     </div>
                     <div class="modal-body size-content-modal back-modal-body">
                         <label for="user">Usuario</label>
-                        <input id="user" class="form-control mb-2 size-content-modal" type="text" name="user"/>
+                        <input id="user" class="form-control mb-2 size-content-modal" type="text" name="user" autocomplete="current-mail"/>
                         <label for="mail">Correo Electrónico</label>
-                        <input id="mail" class="form-control mb-2 size-content-modal" type="email" name="mail"/>
+                        <input id="mail" autocomplete="current-mail" class="form-control mb-2 size-content-modal" type="email" name="mail"/>
                         <label for="name">Nombre</label>
-                        <input id="name" class="form-control mb-2 size-content-modal" type="text" name="name"/>
+                        <input id="name" autocomplete="current-mail" class="form-control mb-2 size-content-modal" type="text" name="name"/>
                         <label for="password">Nueva Contraseña</label>
-                        <input  id="password" class="form-control mb-2 size-content-modal" type="password" name="password" autocomplete="new-password"/>
+                        <input  id="password" autocomplete="current-mail" class="form-control mb-2 size-content-modal" type="password" name="password" autocomplete="new-password"/>
                         <label for="cover-pic">Foto de Portada</label>
-                        <input class="form-control mb-2 size-content-modal" type="file" id="cover-pic" name="cover-pic" accept="image/*"/>
+                        <input autocomplete="current-mail" class="form-control mb-2 size-content-modal" type="file" id="cover-pic" name="cover-pic" accept="image/*"/>
                         <label for="profile-pic">Foto de Perfil</label>
-                        <input class="form-control mb-2 size-content-modal" type="file" id="profile-pic" name="profile-pic" accept="image/*"/>
+                        <input class="form-control mb-2 size-content-modal" autocomplete="current-mail" type="file" id="profile-pic" name="profile-pic" accept="image/*"/>
                     </div>
                     <div class="modal-footer back-modal-footer">
                         <a href="profile-delete-confirmation.html" class="btn btn-danger size-content-modal" >Eliminar cuenta</a>
@@ -91,7 +91,7 @@
                 </div>  
                 <div class="upload-publish">
                     <label for="photo"><i class="bi bi-camera-fill icon-camera"></i></label>
-                    <input id="photo" type="file" name="upload-pic" accept="image/*">
+                    <input autocomplete="current-mail" id="photo" type="file" name="upload-pic" accept="image/*">
                     <button type="submit">Publicar</button>
                 </div>
             </form>
@@ -324,6 +324,7 @@
 
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
-
+    <script src="../scripts/fetch.js"></script>
+    <script src="../scripts/update.js"></script>
 </body>
 </html>
