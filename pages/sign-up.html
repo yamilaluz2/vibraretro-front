@@ -24,16 +24,15 @@
 
         <main class=" main main-sign-up">
             <section class="form-sign-up">
-                <form class="form-common form-signup-delete" action="">
+                <form class="form-common form-signup-delete" action="" id="form">
                     <h2 class="title-form">¡Regístrate!</h2>
-                    <input type="text" name="text" class="form-input" placeholder="Nombre"/>
-                    <input type="email" name="email" class="form-input" placeholder="Correo electrónico"/>
-                    <input type="text" name="text" class="form-input" placeholder="Usuario"/>
-                    <input type="password" name="password" class="form-input" placeholder="Contraseña"/>
+                    <input type="text" name="text" class="form-input" placeholder="Nombre" id="name"/>
+                    <input type="email" name="email" class="form-input" placeholder="Correo electrónico" id="mail"/>
+                    <input type="text" name="text" class="form-input" placeholder="Usuario" id="userName"/>
+                    <input type="password" name="password" class="form-input" placeholder="Contraseña" id="password"/>
                     <button class="form-button" type="submit">Registrarse</button>
                     <a href="../index.html">¿Ya tienes una cuenta?</a>
                 </form>
-
             </section>
             
         </main>
@@ -41,5 +40,6 @@
         <footer class="footer">
             <p>© 2025 VibraRetro. Licenciado bajo la MIT License.</p>
         </footer>
+        <script src="../scripts/Register/signup.js" defer></script>
     </body>
 </html>
