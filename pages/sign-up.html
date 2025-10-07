@@ -24,12 +24,12 @@
 
         <main class=" main main-sign-up">
             <section class="form-sign-up">
-                <form class="form-common form-signup-delete" action="" id="form">
+                <form class="form-common form-signup-delete" id="form" action="">
                     <h2 class="title-form">¡Regístrate!</h2>
-                    <input type="text" name="text" class="form-input" placeholder="Nombre" id="name"/>
-                    <input type="email" name="email" class="form-input" placeholder="Correo electrónico" id="mail"/>
-                    <input type="text" name="text" class="form-input" placeholder="Usuario" id="userName"/>
-                    <input type="password" name="password" class="form-input" placeholder="Contraseña" id="password"/>
+                    <input type="text" name="text" class="form-input" id="name" placeholder="Nombre" autocomplete="current-name/">
+                    <input type="email" name="email" class="form-input" id="mail" placeholder="Correo electrónico" autocomplete="current-mail"/>
+                    <input type="text" name="text" class="form-input" id="userName" placeholder="Usuario" autocomplete="current-user"/>
+                    <input type="password" name="password" class="form-input" id="password" placeholder="Contraseña" autocomplete="current-password"/> 
                     <button class="form-button" type="submit">Registrarse</button>
                     <a href="../index.html">¿Ya tienes una cuenta?</a>
                 </form>
@@ -42,4 +42,6 @@
         </footer>
         <script src="../scripts/Register/signup.js" defer></script>
     </body>
+    <script src="../scripts/fetch.js"></script>
+    <script src="../scripts/signup.js"></script>
 </html>
