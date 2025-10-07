@@ -15,7 +15,7 @@ formulario.addEventListener("submit", function(evt) {
     datosUsuario.append("password", document.getElementById("password").value);
     datosUsuario.append("avatar", document.getElementById("profile-pic").files[0]);
     datosUsuario.append("coverPhoto", document.getElementById("cover-pic").files[0]); 
-    datosUsuario.append("id", 21);
+    datosUsuario.append("id", 30);
 
     const url = "http://localhost:5029/user/Update";
 
