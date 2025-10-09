@@ -8,7 +8,7 @@ function redirection() {
 formulario.addEventListener("submit", function(evt) {
     evt.preventDefault();
 
-    const datosUsuario = {
+    const dataUserRegister = {
         name: document.getElementById("name").value,
         mail: document.getElementById("mail").value,
         userName: document.getElementById("userName").value,
@@ -16,7 +16,7 @@ formulario.addEventListener("submit", function(evt) {
     };
     
     //LLAMADA ASINCRÓNICA
-    createUser(datosUsuario, (data) => {
+    createUser(dataUserRegister, (data) => {
         redirection();
     })
 });

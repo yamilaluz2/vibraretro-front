@@ -1,11 +1,10 @@
-function createUser(dataUser, success) {
+function createUser(dataUserRegister, success) {
     const url = "/user";
 
     const config = {
         method: "POST",
-        body: JSON.stringify(dataUser)
+        body: JSON.stringify(dataUserRegister)
     };
 
-    //ASINCRÓNICA
     serverAPIRest(url, config, success);
 }
