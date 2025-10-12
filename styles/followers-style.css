@@ -41,6 +41,7 @@
 }
 
 .item-follower {
+    height: 280px;
     width: 85%;
     display: flex;
     align-items: center;
@@ -56,10 +57,12 @@
 }
 
 .item-follower img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid black;
 }
 
 .user-info {
@@ -134,8 +137,8 @@
     }
 
     .item-follower img {
-        width: 60%;
-        height: auto;
+        width: 90%;
+        height: 90%;
     }
 
     .user-info {

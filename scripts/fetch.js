@@ -5,7 +5,6 @@ function serverAPIRest(url, config, success) {
 }
 
 function serverFormData(url, config, success) {
-    config.headers = { "Content-Type": "application/json" };
 
     server(url, config, success)
 }

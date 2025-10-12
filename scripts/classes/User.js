@@ -1,9 +1,7 @@
-class User{
+class User {
     constructor(user){
-        this.nombre = nombre;
-        this.mail = mail;
-        this.userName = userName;
-        
-
+        this.userName = user.userName;
+        this.imgOwner = user.avatar;
+        this.coverPhoto = user.coverPhoto;
     }
 }
