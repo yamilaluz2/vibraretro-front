@@ -8,14 +8,3 @@ function createUser(dataUserRegister, success) {
 
     serverAPIRest(url, config, success);
 }
-
-function getAllUsers(success) {
-    const url = "/follower/getUser";
-
-    const config = {
-        method: "GET",
-    };
-    
-    serverAPIRest(url, config, success);
-
-}
