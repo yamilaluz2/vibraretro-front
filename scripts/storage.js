@@ -21,6 +21,4 @@ checkMode.addEventListener('change', (evt) => {
 
     bodyElement.classList.remove();
     bodyElement. classList.add(mode);
-
-
 });
