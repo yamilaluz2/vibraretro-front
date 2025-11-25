@@ -10,7 +10,7 @@ function createUser(dataUserRegister, success) {
 }
 
 
-function getUsers(success){
+/*function getUsers(success){
     const url = "/Follower/getUser";
 
     const config ={
@@ -18,7 +18,7 @@ function getUsers(success){
     };
 
     serverWhithToken(url,config,success);
-}
+}*/
 
 function updateUser(dataUserUpdate,success){
     const url = "/user/Update";
@@ -30,3 +30,36 @@ function updateUser(dataUserUpdate,success){
 
     serverFormData(url,config,success)    
 }
+
+function followUser(dataUserFollow,success){
+    const url = "/Follower/follow";
+
+    const config = {
+        method: "POST",
+        body: JSON.stringify(dataUserFollow)
+    };
+
+    serverWhithToken(url,config,success);
+}
+
+function searchUser(data, filtro,pageNumber, pageSize, success){
+
+    const url = `/Follower/BuscarUserName?userName=${data}&filtro=${filtro}&pageNumber=${pageNumber}&pageSize=${pageSize}`;
+
+    const config = {
+        method: "get"
+    };
+
+    serverWhithToken(url,config,success);
+}
+
+/*function filterUsers(data, pageNumber, pageSize, success){
+
+    const url = `/Follower/filtrarUser?filtro=${data}&pageNumber=${pageNumber}&pageSize=${pageSize}`;
+
+    const config = {
+        method: "get"
+    };
+
+    serverWhithToken(url,config,success);
+}*/
