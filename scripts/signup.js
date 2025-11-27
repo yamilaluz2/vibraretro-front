@@ -1,32 +1,49 @@
 let formulario = document.getElementById("form");
 
 function redirection() {
-    window.location.href = "/index.html";
+  // desde sign-up.html, el login está un nivel arriba en index.html....
+  window.location.href = "../index.html";
 }
 
+formulario.addEventListener("submit", function (evt) {
+  evt.preventDefault();
 
-formulario.addEventListener("submit", function(evt) {
-    evt.preventDefault();
+  const name = document.getElementById("name").value.trim();
+  const mail = document.getElementById("mail").value.trim();
+  const userName = document.getElementById("userName").value.trim();
+  const password = document.getElementById("password").value.trim();
 
-    const datosUsuario = {
-        name: document.getElementById("name").value,
-        mail: document.getElementById("mail").value,
-        userName: document.getElementById("userName").value,
-        password: document.getElementById("password").value
-    };
-    const url = "http://localhost:5029/user/register";
+  // Validación: en caso q faltan datos
+  if (!name || !mail || !userName || !password) {
+    Swal.fire({
+      title: "Faltan datos",
+      text: "Completá todos los campos.",
+      icon: "warning",
+      confirmButtonText: "Entendido",
+    });
+    return;
+  }
 
-    const config = {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(datosUsuario)
-        };
+  // Objeto que se manda al back
+  const dataUserRegister = {
+    name,
+    mail,
+    userName,
+    password,
+  };
 
-    const callback = redirection;
+  // Callback de exito que va al repositorio
+  const onSuccess = async function (response) {
+    await Swal.fire({
+      title: "¡Usuario creado!",
+      text: "Tus datos se guardaron correctamente.",
+      icon: "success",
+      confirmButtonText: "Continuar",
+    });
 
-    server(url,config,callback)
+    redirection();
+  };
+
+  // Llamada REAL al repositorio, usa serverAPIRest por dentro
+  createUser(dataUserRegister, onSuccess);
 });
-
-
-
-

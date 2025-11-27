@@ -1,5 +1,5 @@
 function createUser(dataUserRegister, success) {
-    const url = "/user";
+    const url = "/User/register";
 
     const config = {
         method: "POST",
