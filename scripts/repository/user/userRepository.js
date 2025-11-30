@@ -53,13 +53,13 @@ function searchUser(data, filtro,pageNumber, pageSize, success){
     serverWhithToken(url,config,success);
 }
 
-/*function filterUsers(data, pageNumber, pageSize, success){
 
-    const url = `/Follower/filtrarUser?filtro=${data}&pageNumber=${pageNumber}&pageSize=${pageSize}`;
 
+function getUserProfile(data , success){
+    const url = `/user/miProfile?data=${data}`;
     const config = {
         method: "get"
     };
 
     serverWhithToken(url,config,success);
-}*/
+}

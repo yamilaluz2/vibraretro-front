@@ -32,8 +32,8 @@
         </button>
         <div class="collapse d-lg-block mt-3" id="collapseExample">
             <ul class="nav d-flex flex-column nav-pills color">
-                <li class="nav-item"><a  class="nav-link text-retro fs-5 d-flex flex-column align-items-center" href="wall.html"><i class="bi bi-house-door-fill fs-1 my-colour"></i>Inicio</a></li>
-                <li class="nav-item"><a class="nav-link active fs-5 d-flex flex-column align-items-center" href="my-profile.html"><i class="bi bi-person-fill fs-1"></i>Mi Perfil</a></li>
+                <li class="nav-item"><a id="page-wall" class="nav-link text-retro fs-5 d-flex flex-column align-items-center" href="wall.html"><i class="bi bi-house-door-fill fs-1 my-colour"></i>Inicio</a></li>
+                <li class="nav-item"><a id="page-profile" class="nav-link active fs-5 d-flex flex-column align-items-center" href="my-profile.html"><i class="bi bi-person-fill fs-1"></i>Mi Perfil</a></li>
                 <li class="nav-item"><a class="nav-link text-retro fs-5 d-flex flex-column align-items-center" href="followers.html"><i class="bi bi-people-fill fs-1"></i>Amigos</a></li>
                 <li class="nav-item"><a class="nav-link text-retro fs-5 d-flex flex-column align-items-center" id="logout"><i class="bi bi-door-open-fill fs-1" ></i>Salir</a></li>
             </ul>
@@ -43,13 +43,8 @@
     
     <main class="main-profile main">
         
-        <section class="profile-container">
-            <img src="../images/rocky.webp" alt="Foto de portada" class="cover-photo">
-            <div class="profile-container-row">
-                <img src="../images/photo-profile.webp" alt="Foto de perfil" class="profile-photo">
-                <h2>Ezequiel Figueroa</h2> 
-            </div>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEditarPerfil">Editar Perfil</button>
+        <section id="profile-container" class="profile-container">
+            
         </section>
 
 
@@ -84,151 +79,21 @@
     
 
         <section class="create-post">
-            <form class="form-create-post" action="">
+            <form class="form-create-post" id="formulario-create-post" action="">
                 <div class="create-post-main">
                     <img src="../images/photo-profile.webp" alt="Foto de perfil">
-                    <textarea name="memory" placeholder="¿Qué quieres recordar?"></textarea>
+                    <textarea name="memory" id="description" placeholder="¿Qué quieres recordar?"></textarea>
                 </div>  
                 <div class="upload-publish">
                     <label for="photo"><i class="bi bi-camera-fill icon-camera"></i></label>
-                    <input autocomplete="current-mail" id="photo" type="file" name="upload-pic" accept="image/*">
+                    <input id="photo" autocomplete="current-mail" id="photo" type="file" name="upload-pic" accept="image/*">
                     <button type="submit">Publicar</button>
                 </div>
             </form>
         </section>
 
-        <section class="posts">
-            <article class="post">
-                <div class="post-header">
-                    <div class="post-header-user">
-                        <img class="user-post" src="../images/photo-profile.webp" alt="Foto de perfil">
-                        <h3>Ezequiel Figueroa</h3>
-                    </div>
-                    
-                    <button type="button" data-bs-toggle="modal" data-bs-target="#modalEditarPost"><i class="bi bi-pencil-fill icon-edit-post"></i></button>
-                </div>
-                <div class="post-main">
-                    <p>Se acuerdan de los álbumes de Dragon Ball Z, Yo todavía los tengo!.
-                    </p>                                      
-                    <img src="../images/dragonball.webp" alt="Imagen del post">
-                </div>
-                <div class="post-reaction">
-                    <button type="button"><i class="bi bi-heart-fill reaction-heart">55</i></button>
-                    <button type="button"><i class="bi bi-emoji-angry-fill reaction-angry">12</i></button>
-                    <button type="submit" class="btn btn-link p-0" data-bs-toggle="modal" data-bs-target="#modalComentarios"><i class="bi bi-chat-square-fill reaction-comment">4</i></button>
-                    
-                </div>
-                
-                <form class="form-comment" action="">
-                    <textarea name="comment" placeholder="Comentar"></textarea>
-                    <button type="submit">Publicar comentario</button>
-                </form>    
-            </article>
-
-            <article class="post">
-                <div class="post-header">
-                    <div class="post-header-user">
-                        <img class="user-post" src="../images/photo-profile.webp" alt="Foto de perfil">
-                        <h3>Ezequiel Figueroa</h3>
-                    </div>
-                    
-                    <button type="button" data-bs-toggle="modal" data-bs-target="#modalEditarPost"><i class="bi bi-pencil icon-edit-post"></i></button>
-                </div>
-                <div class="post-main">
-                    <p>Mientras buscaba algo en un cajón que hace mucho que no abría, me encontre esta belleza...</p>
-                    
-                    <img src="../images/xp.webp" alt="Imagen del post">
-                </div>
-                <div class="post-reaction">
-                    <button type="button"><i class="bi bi-heart-fill reaction-heart">55</i></button>
-                    <button type="button"><i class="bi bi-emoji-angry-fill reaction-angry">12</i></button>
-                    <button type="submit" class="btn btn-link p-0" data-bs-toggle="modal" data-bs-target="#modalComentarios"><i class="bi bi-chat-square-fill reaction-comment">152</i></button>
-                    
-                </div>
-                
-                <form class="form-comment" action="">
-                    <textarea name="comment" placeholder="Comentar"></textarea>
-                    <button type="submit">Publicar comentario</button>
-                </form>    
-            </article>
-
-            <article class="post">
-                <div class="post-header">
-                    <div class="post-header-user">
-                        <img class="user-post" src="../images/photo-profile.webp" alt="Foto de perfil">
-                        <h3>Ezequiel Figueroa</h3>
-                    </div>
-                    <button type="button" data-bs-toggle="modal" data-bs-target="#modalEditarPost"><i class="bi bi-pencil icon-edit-post"></i></button>
-                </div>
-                <div class="post-main">
-                    <p>Hola! alguien recuerda ¿Cómo se llamaban estos tazos?</p>
-                    
-                    <img src="../images/askitazos.webp" alt="Imagen del post">
-                </div>
-                <div class="post-reaction">
-                    <button type="button"><i class="bi bi-heart-fill reaction-heart">55</i></button>
-                    <button type="button"><i class="bi bi-emoji-angry-fill reaction-angry">12</i></button>
-                    <button type="submit" class="btn btn-link p-0" data-bs-toggle="modal" data-bs-target="#modalComentarios"><i class="bi bi-chat-square-fill reaction-comment">152</i></button>
-                    
-                </div>
-                
-                <form class="form-comment" action="">
-                    <textarea name="comment" placeholder="Comentar"></textarea>
-                    <button type="submit">Publicar comentario</button>
-                </form>    
-            </article>
-
-            <article class="post">
-                <div class="post-header">
-                    <div class="post-header-user">
-                        <img class="user-post" src="../images/photo-profile.webp" alt="Foto de perfil">
-                        <h3>Ezequiel Figueroa</h3>
-                    </div>
-                    <button type="button" data-bs-toggle="modal" data-bs-target="#modalEditarPost"><i class="bi bi-pencil icon-edit-post"></i></button>
-                </div>
-                <div class="post-main">
-                    <p>Un caramelito Media Hora y de repente volvés a la infancia... ¿Quién más recuerda de este sabor a viejos tiempos?</p>
-                    <img src="../images/mediahora.webp" alt="Imagen del post">
-                </div>
-                <div class="post-reaction">
-                    <button type="button"><i class="bi bi-heart-fill reaction-heart">55</i></button>
-                    <button type="button"><i class="bi bi-emoji-angry-fill reaction-angry">12</i></button>
-                    <button type="submit" class="btn btn-link p-0" data-bs-toggle="modal" data-bs-target="#modalComentarios"><i class="bi bi-chat-square-fill reaction-comment">152</i></button>
-                    
-                </div>
-                
-                <form class="form-comment" action="">
-                    <textarea name="comment" placeholder="Comentar"></textarea>
-                    <button type="submit">Publicar comentario</button>
-                </form>    
-            </article>
-
-            <article class="post">
-                <div class="post-header">
-                    <div class="post-header-user">
-                        <img class="user-post" src="../images/photo-profile.webp" alt="Foto de perfil">
-                        <h3>Ezequiel Figueroa</h3>
-                    </div>
-                    <button type="button" data-bs-toggle="modal" data-bs-target="#modalEditarPost"><i class="bi bi-pencil icon-edit-post"></i></button>
-                </div>
-                <div class="post-main">
-                    <p>Revisando el armario ¡miren lo que encontré! View-Master ¿Recuerdan estoo? ¡Qué nostalgia!</p>
-                
-                    <img src="../images/view-master.webp" alt="Imagen del post">
-                </div>
-                <div class="post-reaction">
-                    <button type="button"><i class="bi bi-heart-fill reaction-heart">55</i></button>
-                    <button type="button"><i class="bi bi-emoji-angry-fill reaction-angry">12</i></button>
-                    <button type="submit" class="btn btn-link p-0" data-bs-toggle="modal" data-bs-target="#modalComentarios"><i class="bi bi-chat-square-fill reaction-comment">152</i></button>
-                    
-                </div>
-                
-                <form class="form-comment" action="">
-                    <textarea name="comment" placeholder="Comentar"></textarea>
-                    <button type="submit">Publicar comentario</button>
-                </form>    
-            </article>
-                          
+        <section id="posts_collection" class="posts">
+                            
         </section>
 
 
@@ -331,5 +196,13 @@
     <script src="../scripts/fetch.js"></script>
     <script src="../scripts/repository/user/userRepository.js"></script>
     <script src="../scripts/presentation/user/update.js"></script>
+    <script src="../scripts/repository/post/postRepository.js"></script>
+    <script src="../scripts/presentation/post/createPost.js"></script>
+    <script src="../scripts/classes/Post.js"></script>
+    <script src="../scripts/classes/User.js"></script>
+    <script src="../scripts/presentation/post/getPostProfile.js"></script>
+    <script src="../scripts/presentation/user/myProfile.js"></script>
+    
+
 </body>
 </html>

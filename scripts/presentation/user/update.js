@@ -1,11 +1,11 @@
-let formulario = document.getElementById("form");
+let formularioUpdate = document.getElementById("form");
 
 function redirection() {
     window.location.href = "/pages/wall.html";
 }
 
 
-formulario.addEventListener("submit", function(evt) {
+formularioUpdate.addEventListener("submit", function(evt) {
     evt.preventDefault();
 
     const dataUser = new FormData();
