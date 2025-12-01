@@ -4,7 +4,11 @@
     height: auto;
     border-radius: 15px;
     margin-right: 1rem;
-    
+}
+
+body.dark .nav {
+  background-color: #857148; 
+  border-radius: 15px;
 }
 
 .nav-pills .nav-link.active {

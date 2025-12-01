@@ -18,8 +18,17 @@
     <body class="grid-layout">
 
         <header class="header">
-            <img src="../images/combi.webp" alt="Logo de una combi"/>
-            <h1>Vibra Retro</h1>
+            <div class="header-left">
+                <img src="../images/combi.webp" alt="Logo de una combi"/>
+                <h1>Vibra Retro</h1>
+            </div>
+            
+            <div class="header-right">
+                <label class="play-mode">
+                    <input type="checkbox" id="mode_button">
+                    <span class="icon">💡</span>
+                </label>
+            </div>
         </header>
 
         <main class=" main main-sign-up">
@@ -38,9 +47,9 @@
         </main>
 
         <footer class="footer">
-            <p>©️ 2025 VibraRetro. Licenciado bajo la MIT License.</p>
+            <p>© 2025 VibraRetro. Licenciado bajo la MIT License.</p>
         </footer>
-
+        <script src="../scripts/mode.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="../scripts/repository/user/userRepository.js"></script>
         <script src="../scripts/fetch.js"></script>
