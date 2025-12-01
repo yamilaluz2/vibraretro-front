@@ -75,6 +75,10 @@
   font-size: 1.6em;
 }
 
+.dark .form-sign-up a{
+  color: #F4EDE2;
+}
+
 
 .form-common input,
 .form-button{

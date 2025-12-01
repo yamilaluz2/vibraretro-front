@@ -57,6 +57,7 @@ body.dark .nav {
     border-radius: 15px;
 }
 
+
 @media screen and (min-width: 1024px){
     nav{
         right: 0;
