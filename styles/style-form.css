@@ -20,9 +20,13 @@
 }
 
 .dark .main-login{
-    background-color: #2b1f18;
-    color: #F4EDE2;
-  }
+  background-color: #2b1f18;
+  color: #F4EDE2;
+}
+
+.dark .main-delete-account {
+  background-color: #2b1f18;
+}
 
 .form-login, 
 .form-sign-up, 
@@ -73,6 +77,10 @@
 
 .form-sign-up a{
   font-size: 1.6em;
+}
+
+.dark .form-sign-up a{
+  color: #F4EDE2;
 }
 
 
