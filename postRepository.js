@@ -1,0 +1,73 @@
+const posts = [{
+    imgOwner: "../images/photo-profile.webp",
+    nameOwner:"Ezequiel Figueroa",
+    body: "Se acuerdan de los álbumes de Dragon Ball Z, Yo todavia los tengo!.",
+    image: "../images/dragonball.webp",
+    countLove: 55,
+    countAngry: 12,
+    countComments: 152,
+    comment: "Comentar",
+    buttonComment:"Publicar Comentario",
+    id: 1,
+}, {
+    imgOwner: "../images/yamilaContreras.jpeg",
+    nameOwner:"Yamila Contreras",
+    body: "¿Qué etiquetas de cigarrillos coleccionaban para jugar? Yo recuerdo que mis favoritas eran las Conway",
+    image: "../images/etiquetas.webp",
+    countLove: 55,
+    countAngry: 12,
+    countComments: 152,
+    comment: "Comentar",
+    buttonComment:"Publicar Comentario",
+    id: 2,
+}, {
+    imgOwner: "../images/fedePiedrasanta-min.jpeg",
+    nameOwner:"Federico Piedrasanta",
+    body: "Cuando el poder de la infancia se lleva en el pecho, ThunderCats.",
+    image: "../images/profe.webp",
+    countLove: 55,
+    countAngry: 12,
+    countComments: 152,
+    comment: "Comentar",
+    buttonComment:"Publicar Comentario",
+    id: 3,
+}, {
+    imgOwner: "../images/jesica-min.jpeg",
+    nameOwner:"Jesica Suarez",
+    body: "¡Se cumplieron 45 años de la creación del mejor juego de la historia genteeeee el PACMAN!",
+    image: "../images/pacman.webp",
+    countLove: 55,
+    countAngry: 12,
+    countComments: 152,
+    comment: "Comentar",
+    buttonComment:"Publicar Comentario",
+    id: 4,
+    }, {
+    imgOwner: "../images/marcos-min.jpeg",
+    nameOwner:"Marcos Albarracin",
+    body: "¿Qué canciones de Soda Stereo me recomiendan para una playlist?",
+    image: "../images/soda.webp",
+    countLove: 55,
+    countAngry: 12,
+    countComments: 152,
+    comment: "Comentar",
+    buttonComment:"Publicar Comentario",
+    id: 5,
+    }, {
+    imgOwner: "../images/Zoe.jpeg",
+    nameOwner:"Zoe Albarracin",
+    body: "No es solo una PC con windows '98, es una máquina del tiempo jajaja.",
+    image: "../images/windows.webp",
+    countLove: 55,
+    countAngry: 12,
+    countComments: 152,
+    comment: "Comentar",
+    buttonComment:"Publicar Comentario",
+    id: 6,
+}];
+
+
+function getPost(page, pageSize, orderBy, direction, show) {
+    //Acá va la función fetch con el GET y función de orden superior.
+    show(posts);
+}

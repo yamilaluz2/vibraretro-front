@@ -10,6 +10,18 @@ function deleteToken(){
     localStorage.removeItem("token");
 }
 
+function setIdUser(idUser){
+    localStorage.setItem("idUser",idUser);
+}
+
+function getIdUser(){
+    return localStorage.getItem("idUser");
+}
+
+function deleteIdUser(){
+    localStorage.removeItem("idUser");
+}
+
 
 function authentication(dataUser,success){
     const url = "/user/login";
@@ -23,6 +35,9 @@ function authentication(dataUser,success){
         if(data.token){
             setToken(data.token);
         }
-        success();
+        if(data.idUser){
+            setIdUser(data.idUser);
+        }
+        success(data);
     })
 }

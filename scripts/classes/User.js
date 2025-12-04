@@ -1,7 +1,15 @@
 class User {
     constructor(user){
+        this.id = user.id;       
         this.userName = user.userName;
-        this.imgOwner = user.avatar;
+        this.isFollowing = user.isFollowing;
+        this.avatar = user.avatar;
         this.coverPhoto = user.coverPhoto;
     }
+
+    /*isFollowingUser(id){
+
+        return this.isFollowing;
+
+    }*/
 }

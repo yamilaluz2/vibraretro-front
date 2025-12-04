@@ -46,7 +46,7 @@
     flex-direction: column;
     align-items: center;
     width: 90vw;
-    max-height: 60vh;
+    max-height: 100vh;
     max-width: 800px;
     background-color: whitesmoke;
     overflow-y: auto;

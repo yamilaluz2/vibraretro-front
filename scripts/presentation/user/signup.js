@@ -8,15 +8,30 @@ function redirection() {
 formulario.addEventListener("submit", function(evt) {
     evt.preventDefault();
 
+    const name = document.getElementById("name").value.trim();
+    const mail = document.getElementById("mail").value.trim();
+    const userName = document.getElementById("userName").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    if (!name || !mail || !userName || !password) {
+        alert("TODOS los campos son obligatorios");
+        return;
+    }
+
     const dataUserRegister = {
-        name: document.getElementById("name").value,
-        mail: document.getElementById("mail").value,
-        userName: document.getElementById("userName").value,
-        password: document.getElementById("password").value
+        name: name,
+        mail: mail,
+        userName: userName,
+        password: password
     };
+
     
-    //LLAMADA ASINCRÓNICA
     createUser(dataUserRegister, (data) => {
-        redirection();
+        alert(data.message);
+
+        
+        if(data.success){
+            redirection();
+        }
     })
 });

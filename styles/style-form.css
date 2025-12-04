@@ -46,6 +46,13 @@
   background-color:#2b1f18;
 }
 
+.password-help {
+  display: block;
+  font-size: 0.95rem; 
+  color: black;       
+  margin-top: 0px;
+}
+
 .form-common{
   display: flex;
   flex-direction:column;

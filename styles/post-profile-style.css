@@ -10,7 +10,14 @@
   background-color: #3a2d20;
 }
 
-.profile-container{
+/*.profile-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+}*/
+
+.my-profiile {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -299,6 +306,13 @@
   color: #97230f;
 }
 
+.reaction-heart.active {
+  color: #d94127;
+}
+.reaction-angry.active {
+  color: #97230f;
+}
+
 .reaction-comment:hover{
   color: #f8a700;
 }
@@ -438,12 +452,11 @@
   .cover-photo{
   height: 20rem;
   
-}
+  }
 
-.profile-photo{
-  width: 15rem;
+  .profile-photo{
+    width: 15rem;
 
-}
+  }
   
-
 }
