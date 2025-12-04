@@ -34,17 +34,17 @@ function darLike(postId, tipo, article) {
         angryIcon.textContent = data.countAngry;
 
         
-        if (data.userHasReacted) {
-            if (data.reactionType.toLowerCase() === "like") heartIcon.classList.add("active");
-            if (data.reactionType.toLowerCase() === "angry") angryIcon.classList.add("active");
-        } else {
-            if (data.reactionType.toLowerCase() === "like") heartIcon.classList.remove("active");
-            if (data.reactionType.toLowerCase() === "angry") angryIcon.classList.remove("active");
-        }
+       heartIcon.classList.remove("active");
+        angryIcon.classList.remove("active");
 
-       
-        if (data.reactionType.toLowerCase() === "like") angryIcon.classList.remove("active");
-        if (data.reactionType.toLowerCase() === "angry") heartIcon.classList.remove("active");
+        
+        if (data.userHasReacted) {
+            if (data.reactionType.toLowerCase() === "like") {
+                heartIcon.classList.add("active");
+            } else if (data.reactionType.toLowerCase() === "angry") {
+                angryIcon.classList.add("active");
+            }
+        }
     });
 }
 

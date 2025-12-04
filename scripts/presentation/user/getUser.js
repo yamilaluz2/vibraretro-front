@@ -28,7 +28,7 @@ function renderUser(user1){
     user.innerHTML = `
         <img src="${user1.avatar}" alt="Foto de perfil">
         <div class="user-info">
-            <a href="#">${user1.userName}</a>
+            <a href="profileUser.html">${user1.userName}</a>
             <button type="button" class="${buttonClass} button" data-user-id="${user1.id}">${buttonText}</button>
         </div>`;
 
