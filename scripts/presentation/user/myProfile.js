@@ -4,13 +4,18 @@ function getNodeProfile(users) {
     const nodoProfile = document.createElement("article");
     nodoProfile.className = "my-profiile";
     nodoProfile.innerHTML = `
-        <img src=${users.coverPhoto} alt="Foto de portada" class="cover-photo">
+        <img src="${users.coverPhoto || '../images/combiProfile.png'}" alt="Foto de portada" class="cover-photo">
         <div class="profile-container-row">
-            <img src=${users.avatar} alt="Foto de perfil" class="profile-photo">
+            <img src="${users.avatar || '../images/ulti.png'}" alt="Foto de perfil" class="profile-photo">
             <h2>${users.userName}</h2> 
         </div>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEditarPerfil">Editar Perfil</button>
     `
+
+    const avatarCreatePost = document.getElementById("avatar-create-post");
+    if (avatarCreatePost) {
+        avatarCreatePost.src = users.avatar || '../images/ulti.png';
+    }
         
     return nodoProfile;
 }
@@ -32,3 +37,4 @@ window.addEventListener("DOMContentLoaded", () => {
 });
     
 });
+

@@ -14,6 +14,10 @@ formulario.addEventListener("submit", function(evt) {
     };
 
     authentication(dataUserLogin, (data)=>{
-        redirection();
+        if (data.success) {
+            redirection();
+        } else {
+            alert(data.message);
+        }
     })
 });

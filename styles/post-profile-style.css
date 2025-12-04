@@ -116,6 +116,7 @@
   resize: none;
 }
 
+
 .upload-publish{
   display: flex;
   justify-content: space-between;
@@ -273,6 +274,13 @@
 
 
 .reaction-angry:hover{
+  color: #97230f;
+}
+
+.reaction-heart.active {
+  color: #d94127;
+}
+.reaction-angry.active {
   color: #97230f;
 }
 

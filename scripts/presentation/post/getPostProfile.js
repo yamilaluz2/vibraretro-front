@@ -5,6 +5,7 @@ let pageSize = 2;
 let cargando = false;
 let hayMas = true;
 
+
 const scrollInfinite = document.createElement('div');
 scrollInfinite.id = 'scroll-infinite';
 sectionPosts.appendChild(scrollInfinite);
@@ -12,6 +13,7 @@ sectionPosts.appendChild(scrollInfinite);
 function getNode(post1) {
     const post = document.createElement("article");
     post.className = "post";
+    post.dataset.id = post1.id;
     post.innerHTML = `
         <div class="post-header">
             <div class="post-header-user">
@@ -27,7 +29,7 @@ function getNode(post1) {
         <div class="post-reaction">
             <button type="button"><i class="bi bi-heart-fill reaction-heart">${post1.countLove}</i></button>
             <button type="button"><i class="bi bi-emoji-angry-fill reaction-angry">${post1.countAngry}</i></button>
-            <button type="submit" class="btn btn-link p-0" data-bs-toggle="modal" data-bs-target="#modalComentarios">
+            <button type="submit" class="btn btn-link p-0" data-postid="${post1.id}" data-bs-toggle="modal" data-bs-target="#modalComentarios">
                 <i class="bi bi-chat-square-fill reaction-comment">${post1.countComments}</i>
             </button>
         </div>
@@ -40,10 +42,24 @@ function getNode(post1) {
     `;
     form.addEventListener("submit", (evt) => {
         evt.preventDefault();
-        console.log(post1.id);
-        console.log(evt.srcElement[0].value);
+        const textarea = form.querySelector("textarea"); 
+        const description = textarea.value.trim();
+
+        let comment= {
+            idPost: post1.id,
+            description:description  
+        };
+
+        CreateComment(comment, ()=>{
+            textarea.value = "";
+
+            const countComment = post.querySelector(".reaction-comment");
+            countComment.textContent = Number(countComment.textContent) + 1;
+        })
     });
     post.append(form);
+    
+
     return post;
 }
 

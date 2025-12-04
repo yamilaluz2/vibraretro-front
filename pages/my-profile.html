@@ -56,13 +56,14 @@
                     </div>
                     <div class="modal-body size-content-modal back-modal-body">
                         <label for="user">Usuario</label>
-                        <input id="user" class="form-control mb-2 size-content-modal" type="text" name="user" autocomplete="current-mail"/>
-                        <label for="mail">Correo Electrónico</label>
-                        <input id="mail" autocomplete="current-mail" class="form-control mb-2 size-content-modal" type="email" name="mail"/>
+                        <input id="user" class="form-control mb-2 size-content-modal" type="text" name="user" autocomplete="username"/>
                         <label for="name">Nombre</label>
-                        <input id="name" autocomplete="current-mail" class="form-control mb-2 size-content-modal" type="text" name="name"/>
+                        <input id="name" autocomplete="name" class="form-control mb-2 size-content-modal" type="text" name="name"/>
                         <label for="password">Nueva Contraseña</label>
                         <input  id="password" autocomplete="current-mail" class="form-control mb-2 size-content-modal" type="password" name="password" autocomplete="new-password"/>
+                        <div id="passwordHelp" class="form-text small">La contraseña debe tener al menos 8 caracteres, incluir una mayúscula, un número y un símbolo.</div>
+                        <label for="password-confirmation">Repetir Contraseña</label>
+                        <input  id="password-confirmation" autocomplete="current-mail" class="form-control mb-2 size-content-modal" type="password" name="passwordConfirmation" autocomplete="new-password"/>
                         <label for="cover-pic">Foto de Portada</label>
                         <input autocomplete="current-mail" class="form-control mb-2 size-content-modal" type="file" id="cover-pic" name="cover-pic" accept="image/*"/>
                         <label for="profile-pic">Foto de Perfil</label>
@@ -81,7 +82,7 @@
         <section class="create-post">
             <form class="form-create-post" id="formulario-create-post" action="">
                 <div class="create-post-main">
-                    <img src="../images/photo-profile.webp" alt="Foto de perfil">
+                    <img src="../images/ulti.png" id="avatar-create-post" alt="Foto de perfil">
                     <textarea name="memory" id="description" placeholder="¿Qué quieres recordar?"></textarea>
                 </div>  
                 <div class="upload-publish">
@@ -135,8 +136,8 @@
                         <img src="../images/dragonball.webp" alt="Imagen del post" class="img-fluid rounded mb-3">
 
                         <div class="d-flex justify-content-start gap-3 mb-4">
-                            <button type="button" class="border-0" ><i class="bi bi-heart-fill reaction-heart">55</i></button>
-                            <button type="button" class="border-0"><i class="bi bi-emoji-angry-fill reaction-angry">12</i></button>
+                            <button type="button" class="border-0" ><i class="bi bi-heart-fill reaction-heart"></i></button>
+                            <button type="button" class="border-0"><i class="bi bi-emoji-angry-fill reaction-angry"></i></button>
                         </div>
 
                         <ul class="list-unstyled">
@@ -188,20 +189,32 @@
 
 
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
-    <script src="../scripts/repository/user/authentication.js"></script>
-    <script src="../scripts/auth.js"></script>
-    <script src="../scripts/repository/user/authentication.js"></script>
-    <script src="../scripts/presentation/user/logout.js"></script>
-    <script src="../scripts/fetch.js"></script>
-    <script src="../scripts/repository/user/userRepository.js"></script>
-    <script src="../scripts/presentation/user/update.js"></script>
-    <script src="../scripts/repository/post/postRepository.js"></script>
-    <script src="../scripts/presentation/post/createPost.js"></script>
-    <script src="../scripts/classes/Post.js"></script>
+    <!-- Librerías externas -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" 
+            crossorigin="anonymous"></script>
+
+    <!-- Clases base -->
     <script src="../scripts/classes/User.js"></script>
-    <script src="../scripts/presentation/post/getPostProfile.js"></script>
+    <script src="../scripts/classes/Post.js"></script>
+
+    <!-- Utilidades compartidas -->
+    <script src="../scripts/fetch.js"></script>
+
+    <!-- Repositorios (usan fetch y clases) -->
+    <script src="../scripts/repository/user/authentication.js"></script>
+    <script src="../scripts/repository/user/userRepository.js"></script>
+    <script src="../scripts/repository/post/postRepository.js"></script>
+    <script src="../scripts/repository/comment/createComment.js"></script>
+
+    <!-- Lógica de presentación (usan repositorios y clases) -->
+    <script src="../scripts/auth.js"></script>
+    <script src="../scripts/presentation/user/logout.js"></script>
+    <script src="../scripts/presentation/user/update.js"></script>
     <script src="../scripts/presentation/user/myProfile.js"></script>
+    <script src="../scripts/presentation/post/createPost.js"></script>
+    <script src="../scripts/presentation/post/getPostProfile.js"></script>
+    <script src="../scripts/presentation/interaction.js/interactionPost.js"></script>
     
 
 </body>

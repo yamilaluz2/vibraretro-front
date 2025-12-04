@@ -38,6 +38,6 @@ function authentication(dataUser,success){
         if(data.idUser){
             setIdUser(data.idUser);
         }
-        success();
+        success(data);
     })
 }

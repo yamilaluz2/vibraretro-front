@@ -26,28 +26,47 @@ function serverWhithToken(url, config, success){
 
 };
 
+
+
+
 function server(url, config, success) {
   const fullUrl = `http://localhost:5029${url}`;
-  console.log("➡️ Fetch a:", fullUrl);
-  console.log("Config:", config);
-
+  
   fetch(fullUrl, config)
     .then(async response => {
-      console.log("📡 Status:", response.status);
+      const data = await response.json();
       if (!response.ok) {
-        const text = await response.text();
+        success({ ...data, success: false });
+        return;
+      }
+
+      success(data);
+    })
+    .catch(error => {
+      console.error("🚨 Error en fetch:", error);
+      success({ success: false, message: "Error de conexión con el servidor" });
+    });
+}
+
+
+/*function server(url, config, success) {
+  const fullUrl = `http://localhost:5029${url}`;
+  
+  fetch(fullUrl, config)
+    .then(async response => {
+      if (!response.ok) {
+        const text = await response.json();
         console.error("❌ Error HTTP:", response.status, text);
         throw new Error(`HTTP error ${response.status}`);
       }
 
       const data = await response.json();
-      console.log("✅ Datos recibidos:", data);
       success(data);
     })
     .catch(error => {
       console.error("🚨 Error en fetch:", error);
     });
-}
+}*/
 
 
 
@@ -71,5 +90,26 @@ function server1(url, config, success) {
 
 
 
+/*function server(url, config, success) {
+  const fullUrl = `http://localhost:5029${url}`;
+  console.log("➡️ Fetch a:", fullUrl);
+  console.log("Config:", config);
 
+  fetch(fullUrl, config)
+    .then(async response => {
+      console.log("📡 Status:", response.status);
+      if (!response.ok) {
+        const text = await response.text();
+        console.error("❌ Error HTTP:", response.status, text);
+        throw new Error(`HTTP error ${response.status}`);
+      }
+
+      const data = await response.json();
+      console.log("✅ Datos recibidos:", data);
+      success(data);
+    })
+    .catch(error => {
+      console.error("🚨 Error en fetch:", error);
+    });
+}*/
 
