@@ -48,6 +48,7 @@ body.dark.grid-layout {
   cursor: pointer;
   user-select: none;
   transition: transform 0.2s;
+  margin-right: 7.5rem;
 }
 
 body.dark .play-mode .icon {
@@ -58,6 +59,7 @@ body.dark .play-mode .icon {
   margin: 0;
   white-space: nowrap;
   color: black;
+  font-size: 2.6rem;
 }
 
 .dark .header h1 {
@@ -117,11 +119,21 @@ body.dark .play-mode .icon {
 @media screen and (min-width: 768px) {
   html{
     font-size: 75%;
-  }}
+  }
+
+  .header h1 {
+    font-size: 4rem;
+  }
+}
   
 @media screen and (min-width: 1024px) {
 
   html{
     font-size: 75%
   };
+
+  .header h1 {
+    font-size: 4rem;
+  }
 }
+

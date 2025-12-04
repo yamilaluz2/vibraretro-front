@@ -387,6 +387,41 @@
   box-shadow: 2px 2px 10px 1px black;
 }
 
+.dark .modal-content {
+  background-color: #241611;
+  color: #F4EDE2;
+}
+
+.dark .form-control {
+  background-color: #e7dfb1;
+}
+
+.dark .modal-body  {
+  background-color:#241611;
+}
+
+.dark .reaction-heart {
+  background-color: #241611;
+  color: #F4EDE2;
+}
+
+.dark .reaction-heart:hover {
+  color:#f8a700;
+}
+
+.dark .reaction-angry {
+  background-color:#241611;
+  color: #F4EDE2;
+}
+
+.dark .reaction-angry:hover {
+  color:#97230f;
+}
+
+.dark .reaction-comment:hover {
+  color:#57970f;
+}
+
 @media screen and (min-width:768px){
   html{
     font-size: 75%;
