@@ -5,6 +5,10 @@
     gap: 15px;
 }
 
+.dark .main-followers {
+    background-color: #3a2d20;
+}
+
 .search-filter-user {
     display: flex;
     flex-direction: column;
@@ -16,6 +20,10 @@
     width: 100vw;
 }
 
+.dark .search-filter-user::placeholder {
+    color:#241611;
+}
+
 .search-filter {
     width: 75vw;
     height: 4rem;
@@ -23,6 +31,14 @@
     font-size: 1.6em;
     padding-left: 5px;
     border-radius: 5px;
+}
+
+.dark .search-filter {
+    background-color: #F4EDE2
+}
+
+.dark .search-filter::placeholder {
+    color:#241611;
 }
 
 .list-users {
@@ -40,7 +56,13 @@
     box-shadow: 4px 4px 5px black;
 }
 
+.dark .list-users {
+    background-color: #3a2d20;
+    box-shadow: none;
+}
+
 .item-follower {
+    height: 280px;
     width: 85%;
     display: flex;
     align-items: center;
@@ -52,14 +74,24 @@
     border: solid 2px black;
     background-color: white;
     border-radius: 5px;
-    
+}
+
+.dark .item-follower{
+    background-color: #241611;
+    border-color: white;
 }
 
 .item-follower img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid black;
+}
+
+.dark .item-follower img {
+    border: 2px solid white;
 }
 
 .user-info {
@@ -74,6 +106,10 @@
     text-decoration: none;
     color: black;
     font-weight: bold;
+}
+
+.dark .user-info a {
+    color: white;
 }
 
 .button-following,
@@ -134,8 +170,8 @@
     }
 
     .item-follower img {
-        width: 60%;
-        height: auto;
+        width: 90%;
+        height: 90%;
     }
 
     .user-info {

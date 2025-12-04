@@ -21,8 +21,17 @@
 
     <body class="grid-layout">
         <header class="header">
-            <img src="../images/combi.webp" alt="Logo de una combi">
-            <h1>Vibra Retro</h1>
+            <div class="header-left">
+                <img src="../images/combi.webp" alt="Logo de una combi"/>
+                <h1>Vibra Retro</h1>
+            </div>
+                    
+            <div class="header-right">
+                <label class="play-mode">
+                    <input type="checkbox" id="mode_button">
+                    <span class="icon">💡</span>
+                </label>
+            </div>
         </header>
         
         <nav class=" z-index position-fixed end-0 ms-auto">
@@ -60,7 +69,7 @@
         </main>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 
-    
+        <script src="../scripts/mode.js"></script>
     </body>
     <!-- 🧩 Clases base y utilidades -->
 <script src="../scripts/classes/User.js"></script>
