@@ -14,7 +14,11 @@ formulario.addEventListener("submit", function(evt) {
     const password = document.getElementById("password").value.trim();
 
     if (!name || !mail || !userName || !password) {
-        alert("TODOS los campos son obligatorios");
+        Swal.fire({
+            icon: "warning",
+            title: "Campos incompletos",
+            text: "TODOS los campos son obligatorios"
+        });
         return;
     }
 
@@ -27,11 +31,24 @@ formulario.addEventListener("submit", function(evt) {
 
     
     createUser(dataUserRegister, (data) => {
-        alert(data.message);
-
         
-        if(data.success){
-            redirection();
+        if (data.success) {
+            Swal.fire({
+                icon: "success",
+                title: "¡Registro exitoso!",
+                text: data.message,
+                timer: 1500,
+                showConfirmButton: false
+            }).then(() => {
+                redirection();
+            });
+
+        } else {
+            Swal.fire({
+                icon: "error",
+                title: "Error",
+                text: data.message
+            });
         }
-    })
+    });
 });

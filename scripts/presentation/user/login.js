@@ -15,9 +15,24 @@ formulario.addEventListener("submit", function(evt) {
 
     authentication(dataUserLogin, (data)=>{
         if (data.success) {
-            redirection();
+
+            Swal.fire({
+                icon: "success",
+                title: "¡Bienvenido!",
+                text: "Login exitoso",
+                showConfirmButton: false,
+                timer: 1500
+            }).then(() => {
+                redirection();
+            });
+
         } else {
-            alert(data.message);
+
+            Swal.fire({
+                icon: "error",
+                title: "Error",
+                text: data.message
+            });
         }
-    })
+    });
 });

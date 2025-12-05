@@ -13,14 +13,22 @@ formularioUpdate.addEventListener("submit", function(evt) {
 
     
     if (!name && !userName && !password && !passwordConfirm && !avatar && !coverPhoto) {
-        alert("Debes completar al menos un campo para actualizar tu perfil");
+        Swal.fire({
+            icon: "warning",
+            title: "Sin cambios",
+            text: "Debes completar al menos un campo para actualizar tu perfil"
+        });
         return;
     }
 
     
     if (password || passwordConfirm) {
         if (password !== passwordConfirm) {
-            alert("Las contraseñas no coinciden");
+            Swal.fire({
+                icon: "error",
+                title: "Error",
+                text: "Las contraseñas no coinciden"
+            });
             return;
         }
     }
@@ -46,7 +54,13 @@ formularioUpdate.addEventListener("submit", function(evt) {
             );
             modal.hide();
             formularioUpdate.reset();
-            alert("Perfil actualizado correctamente");
+            Swal.fire({
+                icon: "success",
+                title: "¡Perfil actualizado!",
+                text: "Los cambios se guardaron correctamente",
+                timer: 1500,
+                showConfirmButton: false
+            });
 
         }
     });
