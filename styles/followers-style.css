@@ -74,11 +74,24 @@
     border: solid 2px black;
     background-color: white;
     border-radius: 5px;
+    transition: 
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.item-follower:hover {
+    transform: translateY(8px);
+    box-shadow: 0 8px 30px black;
 }
 
 .dark .item-follower{
     background-color: #241611;
     border-color: white;
+}
+
+.dark .item-follower:hover {
+    transform: translateY(8px);
+    box-shadow: 0 8px 30px #f8a700;
 }
 
 .item-follower img {
