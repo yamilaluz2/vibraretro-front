@@ -1,6 +1,7 @@
 let sectionPosts = document.getElementById("posts_collection");
 let imgCreatePost = document.getElementById("avatar-create-post")
 const currenView = "wall";
+let idUserLogin =  getIdUser();
 let pageNumber = 1;
 let pageSize = 2;
 let cargando = false;
@@ -74,7 +75,7 @@ function cargarPosts() {
 
     cargando = true;
 
-    getPost(pageNumber, pageSize,currenView, (posts) => {
+    getPost(idUserLogin,pageNumber, pageSize,currenView, (posts) => {
         if (posts.length < pageSize) {
             hayMas = false;
         }
@@ -106,7 +107,7 @@ window.addEventListener("DOMContentLoaded", () => {
     observer.observe(scrollInfinite);
 });
 
-let idUserLogin =  getIdUser();
+
 window.addEventListener("DOMContentLoaded", () => {
     
     getUserProfile(idUserLogin, (user) => {

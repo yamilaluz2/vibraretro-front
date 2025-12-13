@@ -1,5 +1,5 @@
 let sectionPosts = document.getElementById("posts_collection");
-const currenView = "profile";
+const currenView = "profile-User";
 let pageNumber = 1;
 let pageSize = 2;
 let cargando = false;
@@ -67,7 +67,7 @@ function cargarPosts() {
 
     cargando = true;
 
-    getPost(pageNumber, pageSize,currenView, (posts) => {
+    getPost(userId, pageNumber, pageSize, currenView, (posts) => {
         if (posts.length < pageSize) {
             hayMas = false;
         }
@@ -94,7 +94,17 @@ const observer = new IntersectionObserver((entries) => {
     threshold: 0.5
 });
 
+function getUserIdFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    return +params.get('id'); 
+}
+
+
+const userId = getUserIdFromUrl();
+
+
 window.addEventListener("DOMContentLoaded", () => {
+    getProfile(userId)
     cargarPosts();
     observer.observe(scrollInfinite);
 });

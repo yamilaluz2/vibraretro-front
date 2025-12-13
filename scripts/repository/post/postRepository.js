@@ -10,8 +10,8 @@ function createPost(dataCreatePost, success) {
 }
 
 
-function getPost (page, pageSize,currenView,success){
-    const url = `/post/getPost?currenView=${currenView}&pageNumber=${page}&pageSize=${pageSize}`;
+function getPost (userId,page, pageSize,currenView,success){
+    const url = `/post/getPost?id=${userId}&currenView=${currenView}&pageNumber=${page}&pageSize=${pageSize}`;
 
     const config ={
         method: "get"

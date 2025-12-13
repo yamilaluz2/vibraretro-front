@@ -28,10 +28,28 @@ function renderUser(user1){
     user.innerHTML = `
         <img src="${user1.avatar}" alt="Foto de perfil">
         <div class="user-info">
-            <a href="profileUser.html">${user1.userName}</a>
+            <a class="profile-link" href="profileUser.html?id=${user1.id}">${user1.userName}</a>
             <button type="button" class="${buttonClass} button" data-user-id="${user1.id}">${buttonText}</button>
         </div>`;
+    
+    const profileLink = user.querySelector(".profile-link");
 
+    if (profileLink) {
+        profileLink.addEventListener("click", (e) => {
+            if (!user1.isFollowing) {
+                e.preventDefault();
+
+                Swal.fire({
+                    icon: "warning",
+                    title: "No puedes acceder",
+                    text: "Debes seguir a este usuario para poder ver su perfil",
+                    confirmButtonColor: "#3085d6",
+                    confirmButtonText: "Aceptar"
+                });
+            }
+        });
+    }
+        
     const button = user.querySelector(".button");
     button.addEventListener("click", (evt) => {
         const dataUser = { id: evt.target.dataset.userId };
@@ -43,9 +61,11 @@ function renderUser(user1){
                 if (data.isFollowing) {
                 button.classList.remove("button-following");
                 button.classList.add("button-delete-following");
+                user1.isFollowing = true;
                 } else {
                 button.classList.remove("button-delete-following");
                 button.classList.add("button-following");
+                user1.isFollowing = false;
                 }
             }
         });

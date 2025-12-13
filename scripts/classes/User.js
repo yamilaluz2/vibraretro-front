@@ -7,9 +7,5 @@ class User {
         this.coverPhoto = user.coverPhoto;
     }
 
-    /*isFollowingUser(id){
-
-        return this.isFollowing;
-
-    }*/
+    
 }
