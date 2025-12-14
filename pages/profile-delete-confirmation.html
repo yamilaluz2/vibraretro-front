@@ -32,13 +32,13 @@
         </header>
 
         <main class="main main-delete-account">
-            <section class="form-delete-account">
+            <section id="form-delete-user" class="form-delete-account">
                 <form class="form-common form-signup-delete" action="">
                     <h2 class="title-form">Eliminar cuenta</h2>
-                    <input type="text" class="form-input" name="name" placeholder="Nombre">
-                    <input type="email" class="form-input" name="mail" placeholder="Correo electrónico">
-                    <input type="text" class="form-input" name="user" placeholder="Usuario">
-                    <input type="password" class="form-input" name="password" placeholder="Contraseña">
+                    <input type="text" id="name" class="form-input" name="name" placeholder="Nombre" autocomplete="current-name">
+                    <input type="email" id="mail" class="form-input" name="mail" placeholder="Correo electrónico" autocomplete="current-mail">
+                    <input type="text" id="userName" class="form-input" name="user" placeholder="Usuario" autocomplete="current-userName">
+                    <input type="password" id="password" class="form-input" name="password" placeholder="Contraseña" autocomplete="current-password">
                     <div class="button-accion">
                         <button class="form-button button-delete" type="submit">Eliminar</button>
                         <a href="my-profile.html" class="button-cancel form-button" >Cancelar</a>
@@ -54,10 +54,12 @@
             <p>©️ 2025 VibraRetro. Licenciado bajo la MIT License.</p>
         </footer>
 
-        <script src="scripts/mode.js"></script>
+        <script src="../scripts/mode.js"></script>
         <script src="../scripts/repository/user/authentication.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="../scripts/fetch.js"></script>
-        <script src="../scripts/delete.js"></script>
+        <script src="../scripts/repository/user/userRepository.js"></script>
+        <script src="../scripts/presentation/user/deleteUser.js"></script>
+
     </body>
 </html>

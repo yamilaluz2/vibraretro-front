@@ -24,7 +24,7 @@ function getNode(post1) {
                 <h3 id="title-post">${post1.nameOwner}</h3>
             </div>
             ${ canEdit 
-                ? `<button type="button" data-bs-toggle="modal" data-bs-target="#modalEditarPost">
+                ? `<button type="button" data-bs-toggle="modal" data-bs-target="#modalEditarPost" data-postid="${post1.id}">
                         <i class="bi bi-pencil-fill icon-edit-post"></i>
                    </button>`
                 : ``
@@ -42,16 +42,29 @@ function getNode(post1) {
             </button>
         </div>
     `;
+    
     const form = document.createElement("form");
     form.className = "form-comment";
     form.innerHTML = `
         <textarea name="comment" placeholder="Comentar"></textarea>
         <button type="submit">Publicar comentario</button>
     `;
+    
     form.addEventListener("submit", (evt) => {
         evt.preventDefault();
         const textarea = form.querySelector("textarea"); 
         const description = textarea.value.trim();
+        
+        if (!description){
+            Swal.fire({
+                title: 'Ups!',
+                text: "Debes agregar una Descripción.",
+                icon: 'warning',
+                confirmButtonColor: '#f8a700',
+                confirmButtonText: 'Aceptar',
+            })
+            return;
+        }
 
         let comment= {
             idPost: post1.id,

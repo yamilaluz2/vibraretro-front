@@ -42,3 +42,28 @@ function GetPostId(data,success){
 
     serverWhithToken(url,config,success)
 }
+
+
+function UpdatePost(data,success){
+    const url = `/post/Update`;
+
+    const config = {
+        method: "put",
+        body:data
+        
+    };
+
+    serverFormData(url,config,success)
+}
+
+function DeletePost(idPost,success){
+    const url = `/post/${idPost}`;
+
+    const config = {
+        method: "Delete",
+        
+        
+    };
+
+    serverWhithToken(url,config,success)
+}

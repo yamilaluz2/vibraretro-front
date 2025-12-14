@@ -13,7 +13,7 @@ sectionPosts.appendChild(scrollInfinite);
 
 function getNode(post1) {
     const post = document.createElement("article");
-    post.className = "post";
+    post.className = "post ";
     post.dataset.id = post1.id;
     post.innerHTML = `
         <div class="post-header">
@@ -21,7 +21,7 @@ function getNode(post1) {
                 <img class="user-post" src="${post1.imgOwner}" alt="Foto de perfil">
                 <h3 id="title-post">${post1.nameOwner}</h3>
             </div>
-            <button type="button" data-bs-toggle="modal" data-bs-target="#modalEditarPost"><i class="bi bi-pencil-fill icon-edit-post"></i></button>
+            <button type="button" data-bs-toggle="modal" data-bs-target="#modalEditarPost" data-postid="${post1.id}"><i class="bi bi-pencil-fill icon-edit-post"></i></button>
         </div>
         <div class="post-main">
             <p>${post1.body}</p>
@@ -35,16 +35,29 @@ function getNode(post1) {
             </button>
         </div>
     `;
+    
     const form = document.createElement("form");
     form.className = "form-comment";
     form.innerHTML = `
         <textarea name="comment" placeholder="Comentar"></textarea>
         <button type="submit">Publicar comentario</button>
     `;
+    
     form.addEventListener("submit", (evt) => {
         evt.preventDefault();
         const textarea = form.querySelector("textarea"); 
         const description = textarea.value.trim();
+
+        if (!description){
+            Swal.fire({
+                title: 'Ups!',
+                text: "Debes agregar una Descripción.",
+                icon: 'warning',
+                confirmButtonColor: '#f8a700',
+                confirmButtonText: 'Aceptar',
+            })
+            return;
+        }
 
         let comment= {
             idPost: post1.id,

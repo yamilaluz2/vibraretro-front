@@ -317,6 +317,30 @@
   color: #f8a700;
 }
 
+.custom-btn {
+  background-color: #bed7dd;
+  color: black;
+  width: 50px;              
+  height: 50px;             
+  border-radius: 50%;       
+  display: flex;            
+  align-items: center;      
+  justify-content: center;  
+  font-size: 1.2em;          
+  box-shadow: 3px 3px 3px  black;
+  border: none;
+  margin: 0 auto;
+  transition: transform 0.2s ease;           
+}
+
+.custom-btn:hover {
+  transform: scale(1.1); 
+}
+
+  
+
+
+
 .form-comment{
   display: flex;
   flex-direction: column;
@@ -387,9 +411,23 @@
   font-size: 2.4rem;
   
 }
+.modal-texarea{
+  height: 150px;      
+  max-width: 100%;    
+  resize: vertical;
+}
+
+#image-post-edit {
+  width: 100%;        
+  max-width: 600px;   
+  height: 250px;      
+  object-fit: cover; 
+}
+
 
 .size-content-modal{
   font-size: 1.6rem;
+  
 }
 
 .back-modal-body{
@@ -435,6 +473,7 @@
 .dark .reaction-comment:hover {
   color:#57970f;
 }
+
 
 @media screen and (min-width:768px){
   html{

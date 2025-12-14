@@ -15,17 +15,7 @@ formulario.addEventListener("submit", function(evt) {
 
     authentication(dataUserLogin, (data)=>{
         if (data.success) {
-
-            Swal.fire({
-                icon: "success",
-                title: "¡Bienvenido!",
-                text: "Login exitoso",
-                showConfirmButton: false,
-                timer: 1500
-            }).then(() => {
-                redirection();
-            });
-
+            redirection();
         } else {
 
             Swal.fire({

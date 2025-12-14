@@ -10,16 +10,6 @@ function createUser(dataUserRegister, success) {
 }
 
 
-/*function getUsers(success){
-    const url = "/Follower/getUser";
-
-    const config ={
-        method: "get"
-    };
-
-    serverWhithToken(url,config,success);
-}*/
-
 function updateUser(dataUserUpdate,success){
     const url = "/user/Update";
 
@@ -62,4 +52,16 @@ function getUserProfile(data , success){
     };
 
     serverWhithToken(url,config,success);
+}
+
+function DeleteUser(data,success){
+     const url = `/User/Delete`;
+
+    const config = {
+        method: "Delete",
+        body: JSON.stringify(data)
+        
+    };
+
+    serverWhithToken(url,config,success)
 }

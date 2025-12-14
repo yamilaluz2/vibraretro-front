@@ -1,15 +1,29 @@
-const formulario = document.getElementById("formulario-create-post");
+const form = document.getElementById("formulario-create-post");
+const inputdescription = document.getElementById("description")
+const inputImage = document.getElementById("photo")
 
 
-formulario.addEventListener("submit", function(evt) {
+form.addEventListener("submit", function(evt) {
     evt.preventDefault();
 
-    const description = document.getElementById("description").value.trim();
-    const photo = document.getElementById("photo").files[0];
+    let description = inputdescription.value.trim();
+    let image = inputImage.files[0];
+
+    if(!description || !image){
+        Swal.fire({
+        title: 'Ups!',
+        text: "Debes agregar una Descripción y una Image.",
+        icon: 'warning',
+        confirmButtonColor: '#f8a700',
+        confirmButtonText: 'Aceptar',
+        
+        })
+        return
+    }
 
     const dataCreatePost = new FormData();
     dataCreatePost.append("description", description);
-    dataCreatePost.append("postImage", photo);
+    dataCreatePost.append("postImage", image);
      
     
     
@@ -17,7 +31,7 @@ formulario.addEventListener("submit", function(evt) {
         const postInstance = new Post(post);
         const nodo = getNode(postInstance);
         sectionPosts.prepend(nodo);
-        formulario.reset();
+        form.reset();
     })
 
 });

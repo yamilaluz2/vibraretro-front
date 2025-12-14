@@ -70,25 +70,26 @@
 
         <section class="modal fade" id="modalEditarPost" tabindex="-1" aria-labelledby="modalPostLabel" aria-hidden="true">
             <div class="modal-dialog">
-                <form  class="modal-content" action="">
+                <form id="form-editar-post" class="modal-content" action="">
                     <div class="modal-header back-modal-header">
                         <h2 class="modal-title size-title-modal" id="modalPostLabel">Editar publicación</h2>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                     </div>
                     <div class="modal-body back-modal-body">
-                        <textarea class="form-control mb-3 size-content-modal" placeholder="Descripción de la publicación">Se acuerdan de los álbumes de Dragon Ball Z, Yo todavía los tengo!.</textarea>
-                        <img src="../images/dragonball.webp" alt="Imagen del post" class="img-fluid">
+                        <textarea id="description-post-edit" class="form-control mb-3 size-content-modal modal-texarea" placeholder="Descripción de la publicación"></textarea>
+                        <img id="image-post-edit" src="" alt="Imagen del post" class="img-fluid">
+                        <input type="file" id="image-input" accept="image/*" style="display:none;">
                     </div>
                     <div class="modal-footer back-modal-footer">
-                        <button type="button" class="btn btn-danger size-content-modal">Eliminar publicación</button>
+                        <button id="button-delete-post" type="button" class="btn btn-danger size-content-modal">Eliminar publicación</button>
                         <button type="submit" class="btn btn-success size-content-modal">Guardar</button>
                     </div>
                 </form>
             </div>    
         </section>
 
-        <section class="modal fade modal-comentarios" id="modalComentarios" tabindex="-1" aria-labelledby="modalComentariosLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <section class="modal fade modal-comentarios" id="modalComentarios" data-id="" tabindex="-1" aria-labelledby="modalComentariosLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
                 <div class="modal-content">
       
      
@@ -107,13 +108,17 @@
                         <div class="d-flex justify-content-start gap-3 mb-4">
                             <button type="button" class="border-0" ><i id="icon-heart"  class="bi bi-heart-fill reaction-heart"></i></button>
                             <button type="button" class="border-0"><i id="icon-angry" class="bi bi-emoji-angry-fill reaction-angry"></i></button>
+                            
                         </div>
 
                         <ul id="list-comment-modal" class="list-unstyled">
                             
                             
                         </ul>
-                        <button id="btn-load-more-comments" class="btn btn-primary btn-sm w-100 mt-2">Ver más comentarios</button>
+                        
+                        <button id="btn-load-more-comments" class="mt-2 custom-btn">
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
 
                         <form id="form-crear-comment-modal" action="">
                             <textarea class="form-control mb-2 size-content-modal" name="comment" placeholder="Comentar"></textarea>
@@ -132,7 +137,7 @@
             integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" 
             crossorigin="anonymous"></script>
 
-    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../scripts/mode.js"></script>
     <script src="../scripts/classes/Post.js"></script>
     <script src="../scripts/classes/comment.js"></script>
@@ -156,6 +161,7 @@
     <script src="../scripts/presentation/post/getPostWall.js"></script>
     <script src="../scripts/presentation/comment/modalComment.js"></script>
     <script src="../scripts/presentation/interaction.js/interactionPost.js"></script>
+    <script src="../scripts/presentation/post/editPost.js"></script>
     
 
 </body>

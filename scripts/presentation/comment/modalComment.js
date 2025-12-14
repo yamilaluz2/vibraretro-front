@@ -8,9 +8,10 @@ const angryPostModal = document.getElementById("icon-angry");
 const listCommentModal = document.getElementById("list-comment-modal");
 const btnLoadMore = document.getElementById("btn-load-more-comments");
 const formCreateCommentModal = document.getElementById("form-crear-comment-modal")
+const textarea = formCreateCommentModal.querySelector("textarea");
 
 let pageNumberComment = 1;
-const pageSizeComment = 1;
+const pageSizeComment = 3;
 let currentPostId = null;
 
 function getNodeComment(comment1) {
@@ -58,6 +59,7 @@ function loadComments() {
 
         
         pageNumberComment++;
+        
     });
 }
 
@@ -69,7 +71,7 @@ btnLoadMore.addEventListener("click", () => {
 
 function GetPostModal(idPost) {
     GetPostId(idPost, (post) => {
-        postModal = new Post(post);
+        let postModal = new Post(post);
 
         titlePostModal.textContent = postModal.nameOwner;
         avatarPostModal.src = postModal.imgOwner;
@@ -122,9 +124,18 @@ function reaction (postId,tipo){
 
 
 formCreateCommentModal.addEventListener("submit",(evt)=>{
-    evt.preventDefault();
-    const textarea = formCreateCommentModal.querySelector("textarea"); 
+    evt.preventDefault(); 
         const description = textarea.value.trim();
+        if (!description){
+            Swal.fire({
+                title: 'Ups!',
+                text: "Debes agregar una Descripción.",
+                icon: 'warning',
+                confirmButtonColor: '#f8a700',
+                confirmButtonText: 'Aceptar',
+            })
+            return;
+        }
 
         let commentModal= {
             idPost: currentPostId,
@@ -136,6 +147,11 @@ formCreateCommentModal.addEventListener("submit",(evt)=>{
             const commentInstance = new Comment(comment);
             const nodo = getNodeComment(commentInstance);
             listCommentModal.prepend(nodo);
+            const commentNode = document.querySelector(`article[data-id="${currentPostId}"]`);
+                    if (commentNode) {
+                        countComment= commentNode.querySelector(".reaction-comment")
+                        countComment.textContent = Number(countComment.textContent) + 1;
+                    }
 
             
         })
