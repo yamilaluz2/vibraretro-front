@@ -18,7 +18,7 @@ function getNode(post1) {
     post.innerHTML = `
         <div class="post-header">
             <div class="post-header-user">
-                <img class="user-post" src="${post1.imgOwner}" alt="Foto de perfil">
+                <img class="user-post" src="${post1.imgOwner|| '../images/ulti.png'}" alt="Foto de perfil">
                 <h3 id="title-post">${post1.nameOwner}</h3>
             </div>
             <button type="button" data-bs-toggle="modal" data-bs-target="#modalEditarPost" data-postid="${post1.id}"><i class="bi bi-pencil-fill icon-edit-post"></i></button>
