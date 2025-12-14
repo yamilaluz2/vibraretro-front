@@ -17,7 +17,7 @@
     padding: 10px;
     max-width: 800px;
     margin-top: 50px;
-    width: 100vw;
+    width: 100%;
 }
 
 .dark .search-filter-user::placeholder {
@@ -25,7 +25,7 @@
 }
 
 .search-filter {
-    width: 75vw;
+    width: 100%;
     height: 4rem;
     max-width: 800px;
     font-size: 1.6em;
@@ -45,7 +45,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 90vw;
+    width: 100%;
     max-height: 100vh;
     max-width: 800px;
     background-color: whitesmoke;
@@ -62,11 +62,11 @@
 }
 
 .item-follower {
-    height: 280px;
-    width: 85%;
+    height: auto;
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
     gap: 1rem;
     padding: 1rem;
     box-sizing: border-box;
@@ -74,11 +74,24 @@
     border: solid 2px black;
     background-color: white;
     border-radius: 5px;
+    transition: 
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.item-follower:hover {
+    transform: translateY(8px);
+    box-shadow: 0 8px 30px black;
 }
 
 .dark .item-follower{
     background-color: #241611;
     border-color: white;
+}
+
+.dark .item-follower:hover {
+    transform: translateY(8px);
+    box-shadow: 0 8px 30px #f8a700;
 }
 
 .item-follower img {
@@ -176,9 +189,5 @@
 
     .user-info {
         align-items: center;
-    }
-
-    html{
-        font-size: 70%;
     }
 }
