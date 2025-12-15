@@ -21,7 +21,8 @@ formulario.addEventListener("submit", function(evt) {
             Swal.fire({
                 icon: "error",
                 title: "Error",
-                text: data.message
+                text: data.message,
+            
             });
         }
     });

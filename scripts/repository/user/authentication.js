@@ -41,3 +41,13 @@ function authentication(dataUser,success){
         success(data);
     })
 }
+
+function LogoutUser(success){
+    const url = "/user/Logout";
+
+    const config = {
+        method: "POST"
+    };
+
+    serverWhithToken(url,config,success)
+}

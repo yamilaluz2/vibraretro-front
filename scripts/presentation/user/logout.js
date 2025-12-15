@@ -1,9 +1,15 @@
-let butonLogout = document.getElementById("logout");
+const butonLogout = document.getElementById("logout");
 
 butonLogout.addEventListener("click", ()=>{
    
-    deleteToken();
-    deleteIdUser();
-    window.location.href = "/index.html";
+    LogoutUser((data)=>{
+        
+        if(data.success){
+            deleteToken();
+            deleteIdUser();
+            window.location.href = "/index.html";
+        }
+
+    })  
      
 })
